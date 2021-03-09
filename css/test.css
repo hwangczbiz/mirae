@@ -1,7 +1,12 @@
 body {
   background-color: skyblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .class_name {
   color: red;
+  background-color: purple;
+  border: 1px solid red;
 }
