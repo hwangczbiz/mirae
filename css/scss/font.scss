@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mixin.scss';
+
+/*-------------------------------------------------------------------
+    @Font
+-------------------------------------------------------------------*/
+/* Heading */
+h1 { @include fontStyler(48px, bold, 1.25, -2.4px) }
+h2 { @include fontStyler(40px, bold, 1.38, -2px) }
+h3 { @include fontStyler(32px, bold, 1.5, -1.6px) }
+h4 { @include fontStyler(24px, bold, 1.5, -1.2px) }
+/* Body */
+.font18 { @include fontStyler(18px, bold, 1.56, -0.36px) }
+.font15 { @include fontStyler(15px, bold, 1.6, -0.3px) }
+.font14 { @include fontStyler(14px, bold, 1.57, -0.28px) }
+/* Button */
+.btn-font19 { @include fontStyler(19px, bold, 1.58, -0.38px) }
+.btn-font16 { @include fontStyler(16px, bold, 1.56, -0.32px) }
+.btn-font14 { @include fontStyler(14px, bold, 1.57, -0.28px) }

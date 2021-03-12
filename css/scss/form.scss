@@ -1,0 +1,252 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mixin.scss';
+
+
+/*-------------------------------------------------------------------
+    @Form
+-------------------------------------------------------------------*/
+/* input */
+input {border: 1px solid #e8e8e8;}
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=date]
+{
+    width: 250px;
+    padding: 0px 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    background-color: $color-ff;
+    outline: 0;
+    @include fontStyler(15px, 500, 36px, normal, #101416);
+}
+input[type=text]:read-only,
+input[type=password]:read-only,
+input[type=number]:read-only,
+input[type=date]:read-only
+{
+    color: $color-86;
+    background-color: $color-f7;
+}
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=date]:focus:not([readonly])
+{
+    border-color: $color-41;
+}
+input[type=text].error,
+input[type=password].error,
+input[type=number].error,
+input[type=date].error
+{
+    color: $color-1d;
+    background-color: $color-error-input;
+    border-color: #e4344a;
+}
+/* textarea */
+textarea {
+    width: 400px;
+    height: 155px;
+    padding: 12px 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    resize: none;
+    @include fontStyler(15px, 500, 1.73, -0.38px, $color-1d);
+}
+textarea:focus {
+    border-color: $color-41;
+}
+input::placeholder, textarea::placeholder {
+    color: $color-a8;
+}
+/* select */
+select {
+    width: 250px;
+    height: 40px;
+    padding: 0px 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    @include fontStyler(15px, normal, 2.4, normal, $color-1d);
+    option {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+.selectric-wrapper {
+    width: 250px;
+    height: 40px;
+    .selectric {
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        background-color: $color-ff;
+        .label {
+            margin: 0px 15px;
+            @include fontStyler(15px, normal, 2.4, normal, $color-1d);
+        }
+        .button {
+            width: 34px;
+            background-color: transparent;
+            &::after {
+                border-top-width: 6.8px;
+                border-top-color: $color-1d;
+            }
+        }
+    }
+    .selectric-items {
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        box-shadow: none;
+        background-color: #fff;
+        li {
+            padding: 0px 15px;
+            @include fontStyler(15px, normal, 2.87, normal, $color-1d)
+        }
+        li:hover, li.highlighted {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+    &.selectric-above .selectric-items {
+        bottom: 42px;
+    }
+    &.selectric-below .selectric-items {
+        top: 42px;
+    }
+}
+.selectric-disabled {
+    user-select: none;
+    .selectric {
+        background-color: $color-f7;
+        .label {
+            color: $color-86;
+        }
+        .button {
+            width: 34px;
+            background-color: transparent;
+            &::after {
+                border-top-width: 6.8px;
+                border-top-color: $color-86;
+            }
+        }
+    }
+}
+
+/* radio */
+.radio-con {
+    display: inline-block;
+    position: relative;
+    input[type=radio] {
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        opacity: 0;
+        &:checked {
+            + label {
+                &::before {
+                    border: 7px solid $color-main;
+                }
+            }
+        }
+        &:disabled {
+            + label {
+                color: $color-a8;
+                &::before {
+                    background-color: $color-de;
+                }
+            }
+        }
+        &:checked:disabled {
+            + label {
+                &::before {
+                    border: 1px solid $color-c3;
+                }
+                &::after {
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    background-color: #aaaaaa;
+                }
+            }
+        }
+    }
+    label {
+        &::before {
+            content: "";
+            width: 21px; 
+            height: 21px;
+            position: absolute;
+            left: 0;
+            border: 1px solid $color-c3;
+            border-radius: 50%;
+            background-color: $color-ff;
+        }
+        padding-left: 29px;
+        cursor: pointer;
+        @include fontStyler(15px, normal, 21px, normal, $color-1d);
+    }
+}
+/* checkbox */
+.checkbox-con {
+    display: inline-block;
+    position: relative;
+    input[type=checkbox] {
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        opacity: 0;
+        &:checked {
+            + label {
+                &::before {
+                    border: 7px solid $color-main;
+                }
+            }
+        }
+        &:disabled {
+            + label {
+                color: $color-a8;
+                &::before {
+                    background-color: $color-de;
+                }
+            }
+        }
+        &:checked:disabled {
+            + label {
+                &::before {
+                    border: 1px solid $color-c3;
+                }
+                &::after {
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    background-color: #aaaaaa;
+                }
+            }
+        }
+    }
+    label {
+        &::before {
+            content: "";
+            color: #ffffff;
+            text-align: center;
+            width: 21px; 
+            height: 21px;
+            position: absolute;
+            left: 0;
+            border: 1px solid $color-c3;
+            border-radius: 5px;
+            background-color: $color-ff;
+        }
+        padding-left: 29px;
+        cursor: pointer;
+        @include fontStyler(15px, normal, 21px, normal, $color-1d);
+    }
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* 스타일가이드 양식 */
+main {
+  padding: 20px;
+}
+
+hr {
+  margin: 50px 0;
+}
+
+section > * {
+  margin-bottom: 20px;
+}
+
+section > h2:first-child {
+  margin-bottom: 20px;
+}
+
+ul.list_con > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+ul.list_con > li p.label {
+  width: 100px;
+}

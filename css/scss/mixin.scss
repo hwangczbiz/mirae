@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+@mixin fontStyler($size, $weight, $height, $spacing, $color: $color-00){
+    font-size: $size; 
+    font-weight: $weight; 
+    line-height: $height; 
+    letter-spacing: $spacing; 
+    color: $color;
+}

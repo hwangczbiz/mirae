@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wiph=device-wiph, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/lib/selectric.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/libs/jquery.selectric.js"></script>
+    <title>Form Element Style</title>
+</head>
+
+<body>
+    <main>
+        <h1>Form Element Style</h1>
+        <hr />
+        <section id="input-sec">
+            <!-- input 요소 -->
+            <h2>Input</h2>
+            <ul class="list_con">
+                <li>
+                    <p class="label">default</p>
+                    <p>
+                        <input type="text" name="" id="">
+                    </p>
+                </li>
+                <li>
+                    <p class="label">readonly</p>
+                    <p>
+                        <input type="text" name="" id="" value="읽기만 가능" readonly>
+                    </p>
+                </li>
+                <li>
+                    <p class="label">error</p>
+                    <p>
+                        <input type="text" name="" id="" class="error" value="작성 오류">
+                    </p>
+                </li>
+                <li>
+                    <p class="label">password</p>
+                    <p>
+                        <input type="password" name="" id="">
+                    </p>
+                </li>
+                <li>
+                    <p class="label">number</p>
+                    <p>
+                        <input type="number" name="" id="">
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <hr />
+        <section id="textarea-sec">
+            <!-- textarea 요소 -->
+            <h2>Textarea</h2>
+            <p>
+                <textarea name="" id="" cols="30" rows="10" placeholder="가이드 문구"></textarea>
+            </p>
+            <p>
+                <textarea name="" id="" cols="30" rows="10">입력중입니다!</textarea>
+            </p>
+        </section>
+        <hr />
+        <section id="selectbox-sec">
+            <!-- selectbox 요소 -->
+            <h2>SelectBox</h2>
+            <ul class="list_con">
+                <li>
+                    <p class="label">default</p>
+                    <p>
+                        <select name="" id="" class="custom-select">
+                            <option value="1">option1</option>
+                            <option value="2">option2</option>
+                            <option value="3">option3</option>
+                            <option value="4">option4</option>
+                            <option value="5">option5</option>
+                            <option value="6">option6</option>
+                            <option value="7">option7</option>
+                            <option value="8">option8</option>
+                            <option value="9">option9</option>
+                        </select>
+                    </p>
+                </li>
+                <li>
+                    <p class="label">disabled</p>
+                    <p>
+                        <select name="" id="test" class="custom-select" disabled>
+                            <option value="1">option1</option>
+                            <option value="2">option2</option>
+                            <option value="3">option3</option>
+                        </select>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <hr />
+        <section id="radio-sec">
+            <!-- radio 요소 -->
+            <h2>Radio</h2>
+            <ul class="list_con">
+                <li>
+                    <p>
+                        <span class="radio-con">
+                            <input type="radio" name="" id="radio00">
+                            <label for="radio00">선택 전</label>
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span class="radio-con">
+                            <input type="radio" name="" id="radio01" checked>
+                            <label for="radio01">선택 상태</label>
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span class="radio-con">
+                            <input type="radio" name="" id="radio02" disabled>
+                            <label for="radio02">선택 불가능</label>
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span class="radio-con">
+                            <input type="radio" name="" id="radio03" checked disabled>
+                            <label for="radio03">선택 해제 불가능</label>
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <hr />
+        <section id="checkbox-sec">
+            <!-- Checkbox 요소 -->
+            <h2>Checkbox</h2>
+            <ul class="list_con">
+                <li>
+                    <span class="checkbox-con">
+                        <input type="checkbox" name="" id="checkbox00">
+                        <label for="checkbox00">체크 전</label>
+                    </span>
+                </li>
+                <li>
+                    <span class="checkbox-con">
+                        <input type="checkbox" name="" id="checkbox01" checked>
+                        <label for="checkbox01">체크 상태</label>
+                    </span>
+                </li>
+                <li>
+                    <span class="checkbox-con">
+                        <input type="checkbox" name="" id="checkbox02" disabled>
+                        <label for="checkbox02">체크 불가능</label>
+                    </span>
+                </li>
+                <li>
+                    <span class="checkbox-con">
+                        <input type="checkbox" name="" id="checkbox03" checked disabled>
+                        <label for="checkbox03">체크 해제 불가능</label>
+                    </span>
+                </li>
+            </ul>
+        </section>
+        <hr />
+    </main>
+    <script>
+        $(function(){
+            $(".custom-select").selectric();
+        })
+    </script>
+</body>
+
+</html>
