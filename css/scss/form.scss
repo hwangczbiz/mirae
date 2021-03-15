@@ -1,21 +1,21 @@
 @charset "utf-8";
-@import 'color.scss';
-@import 'mixin.scss';
+@import 'font.scss';
 
 
 /*-------------------------------------------------------------------
     @Form
 -------------------------------------------------------------------*/
 /* input */
-input {border: 1px solid #e8e8e8;}
+input {border: 1px solid $color-e8;}
 input[type=text],
 input[type=password],
 input[type=number],
 input[type=date]
 {
     width: 250px;
-    padding: 0px 15px;
-    border: 1px solid #e8e8e8;
+    height: 40px;
+    padding: 1px 15px;
+    border: 1px solid $color-e8;
     border-radius: 5px;
     background-color: $color-ff;
     outline: 0;
@@ -44,13 +44,19 @@ input[type=date].error
     color: $color-1d;
     background-color: $color-error-input;
     border-color: #e4344a;
+    + span.error-msg {
+        display: block;
+        margin-top: 5px;
+        @include fontStyler(14px, 500, normal, normal, $color-error);
+    }
 }
+
 /* textarea */
 textarea {
     width: 400px;
     height: 155px;
     padding: 12px 15px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid $color-e8;
     border-radius: 5px;
     resize: none;
     @include fontStyler(15px, 500, 1.73, -0.38px, $color-1d);
@@ -61,12 +67,13 @@ textarea:focus {
 input::placeholder, textarea::placeholder {
     color: $color-a8;
 }
+
 /* select */
 select {
     width: 250px;
     height: 40px;
     padding: 0px 15px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid $color-e8;
     border-radius: 5px;
     @include fontStyler(15px, normal, 2.4, normal, $color-1d);
     option {
@@ -78,7 +85,7 @@ select {
     width: 250px;
     height: 40px;
     .selectric {
-        border: 1px solid #e8e8e8;
+        border: 1px solid $color-e8;
         border-radius: 5px;
         background-color: $color-ff;
         .label {
@@ -95,7 +102,7 @@ select {
         }
     }
     .selectric-items {
-        border: 1px solid #e8e8e8;
+        border: 1px solid $color-e8;
         border-radius: 5px;
         box-shadow: none;
         background-color: #fff;
@@ -190,6 +197,7 @@ select {
         @include fontStyler(15px, normal, 21px, normal, $color-1d);
     }
 }
+
 /* checkbox */
 .checkbox-con {
     display: inline-block;
@@ -197,12 +205,13 @@ select {
     input[type=checkbox] {
         width: 21px;
         height: 21px;
-        position: absolute;
+        float: left;
         opacity: 0;
         &:checked {
             + label {
                 &::before {
-                    border: 7px solid $color-main;
+                    border-color: $color-main;
+                    background: $color-main url("../../img/icn_form_checkbox.svg") no-repeat center center;
                 }
             }
         }
@@ -218,16 +227,7 @@ select {
             + label {
                 &::before {
                     border: 1px solid $color-c3;
-                }
-                &::after {
-                    content: "";
-                    width: 7px;
-                    height: 7px;
-                    border-radius: 50%;
-                    position: absolute;
-                    top: 7px;
-                    left: 7px;
-                    background-color: #aaaaaa;
+                    background-image: url("../../img/icn_form_checkbox_readonly.svg");
                 }
             }
         }
@@ -235,8 +235,6 @@ select {
     label {
         &::before {
             content: "";
-            color: #ffffff;
-            text-align: center;
             width: 21px; 
             height: 21px;
             position: absolute;
@@ -245,8 +243,40 @@ select {
             border-radius: 5px;
             background-color: $color-ff;
         }
-        padding-left: 29px;
+        display: block;
+        overflow: hidden;
+        padding-left: 8px;
+        word-break: keep-all;
         cursor: pointer;
         @include fontStyler(15px, normal, 21px, normal, $color-1d);
+    }
+}
+
+/* datepicker */
+.datepicker-con {
+    display: inline-block;
+    position: relative;
+    input[type=text] {
+        padding-left: 44px;
+        @include fontStyler(15px, normal, 18px, normal, $color-1d);
+    }
+}
+.ui-datepicker-trigger {
+    background: none;
+    position: absolute;
+    top: 11px;
+    left: 15px;
+}
+.ui-datepicker {
+    width: 334px;
+    margin-top: 2px;
+    padding: 20px 32px;
+    border: 1px solid $color-e8;
+    border-radius: 5px;
+    .ui-datepicker-title {
+        @include fontStyler(32px, bold, 0.81, -0.8px, $color-1d);/*  */
+    }
+    .ui-datepicker-header {
+        background: none;
     }
 }

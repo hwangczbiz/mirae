@@ -5,6 +5,92 @@
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @Font
+-------------------------------------------------------------------*/
+/* Heading */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -2.4px;
+  color: #000000;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.38;
+  letter-spacing: -2px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.6px;
+  color: #000000;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.2px;
+  color: #000000;
+}
+
+/* Body */
+.font18 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.font15 {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
+.font14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000;
+}
+
+/* Button */
+.btn-font19 {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.58;
+  letter-spacing: -0.38px;
+  color: #000000;
+}
+
+.btn-font16 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -0.32px;
+  color: #000000;
+}
+
+.btn-font14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000;
+}
+
+/*-------------------------------------------------------------------
     @Form
 -------------------------------------------------------------------*/
 /* input */
@@ -17,7 +103,8 @@ input[type=password],
 input[type=number],
 input[type=date] {
   width: 250px;
-  padding: 0px 15px;
+  height: 40px;
+  padding: 1px 15px;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
   background-color: #ffffff;
@@ -59,6 +146,19 @@ input[type=date].error {
   color: #1d1d1d;
   background-color: #fff5f6;
   border-color: #e4344a;
+}
+
+input[type=text].error + span.error-msg,
+input[type=password].error + span.error-msg,
+input[type=number].error + span.error-msg,
+input[type=date].error + span.error-msg {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #dc3636;
 }
 
 /* textarea */
@@ -269,12 +369,13 @@ select option {
 .checkbox-con input[type=checkbox] {
   width: 21px;
   height: 21px;
-  position: absolute;
+  float: left;
   opacity: 0;
 }
 
 .checkbox-con input[type=checkbox]:checked + label::before {
-  border: 7px solid #4b70eb;
+  border-color: #4b70eb;
+  background: #4b70eb url("../../img/icn_form_checkbox.svg") no-repeat center center;
 }
 
 .checkbox-con input[type=checkbox]:disabled + label {
@@ -287,21 +388,14 @@ select option {
 
 .checkbox-con input[type=checkbox]:checked:disabled + label::before {
   border: 1px solid #c3c3c3;
-}
-
-.checkbox-con input[type=checkbox]:checked:disabled + label::after {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  background-color: #aaaaaa;
+  background-image: url("../../img/icn_form_checkbox_readonly.svg");
 }
 
 .checkbox-con label {
-  padding-left: 29px;
+  display: block;
+  overflow: hidden;
+  padding-left: 8px;
+  word-break: keep-all;
   cursor: pointer;
   font-size: 15px;
   font-weight: normal;
@@ -312,8 +406,6 @@ select option {
 
 .checkbox-con label::before {
   content: "";
-  color: #ffffff;
-  text-align: center;
   width: 21px;
   height: 21px;
   position: absolute;
@@ -321,4 +413,47 @@ select option {
   border: 1px solid #c3c3c3;
   border-radius: 5px;
   background-color: #ffffff;
+}
+
+/* datepicker */
+.datepicker-con {
+  display: inline-block;
+  position: relative;
+}
+
+.datepicker-con input[type=text] {
+  padding-left: 44px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #1d1d1d;
+}
+
+.ui-datepicker-trigger {
+  background: none;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+
+.ui-datepicker {
+  width: 334px;
+  margin-top: 2px;
+  padding: 20px 32px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 0.81;
+  letter-spacing: -0.8px;
+  color: #1d1d1d;
+  /*  */
+}
+
+.ui-datepicker .ui-datepicker-header {
+  background: none;
 }

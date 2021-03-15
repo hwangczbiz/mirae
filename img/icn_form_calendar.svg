@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#000;stroke-width:2px;stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="icn_form_calendar" transform="translate(-572 -611)">
+        <g id="사각형_308" fill="none" stroke="#000" stroke-width="2px" transform="translate(572 613)">
+            <rect width="18" height="15" stroke="none" rx="3"/>
+            <rect width="16" height="13" x="1" y="1" rx="2"/>
+        </g>
+        <path id="선_96" d="M0 0L0 4" class="cls-2" transform="translate(577 612)"/>
+        <path id="선_97" d="M0 0L0 4" class="cls-2" transform="translate(585 612)"/>
+        <path id="선_98" d="M0 0L0 0" class="cls-2" transform="translate(578 621)"/>
+        <path id="선_99" d="M0 0L0 0" class="cls-2" transform="translate(581 621)"/>
+        <path id="선_100" d="M0 0L0 0" class="cls-2" transform="translate(584 621)"/>
+    </g>
+</svg>
