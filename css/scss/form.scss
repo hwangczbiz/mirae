@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import 'font.scss';
+@import 'color.scss';
+@import 'mixin.scss';
 
 
 /*-------------------------------------------------------------------
@@ -289,6 +290,7 @@ select {
     position: relative;
     input[type=text] {
         padding-left: 44px;
+        font-family: "Roboto";
         @include fontStyler(15px, normal, 18px, normal, $color-1d);
     }
     .ui-datepicker-trigger {
@@ -305,6 +307,7 @@ select {
     border: 1px solid $color-e8;
     border-radius: 5px;
     background-color: $color-ff;
+    font-family: "Roboto";
     .ui-datepicker-title {
         @include fontStyler(32px, bold, 38px, -0.8px, $color-1d);
     }
@@ -346,6 +349,7 @@ select {
     }
     th {
         padding-bottom: 17px;
+        font-family: "Noto Sans KR";
         @include fontStyler(16px, bold, 24px, -0.4px, $color-1d);
         &:first-child {
             color: $color-dc;

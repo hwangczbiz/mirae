@@ -6,6 +6,98 @@
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @Font
+-------------------------------------------------------------------*/
+/* Heading */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -2.4px;
+  color: #000000;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.38;
+  letter-spacing: -2px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.6px;
+  color: #000000;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.2px;
+  color: #000000;
+}
+
+/* Body */
+.font18 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.font15 {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
+.font14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000;
+}
+
+/* Button */
+.btn-font19 {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.58;
+  letter-spacing: -0.38px;
+  color: #000000;
+}
+
+.btn-font16 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -0.32px;
+  color: #000000;
+}
+
+.btn-font14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000;
+}
+
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
     @Form
 -------------------------------------------------------------------*/
 /* input */
@@ -500,4 +592,176 @@ select option {
   background-color: #4b70eb;
   border-radius: 50%;
   font-weight: bold;
+}
+
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Button
+-------------------------------------------------------------------*/
+input[type=button].btn-solid {
+  display: inline-block;
+  min-width: 180px;
+  height: 70px;
+  background-color: #4b70eb;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.88;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+}
+
+input[type=button].btn-solid:hover:not([disabled]), input[type=button].btn-solid:active:not([disabled]), input[type=button].btn-solid.hover {
+  -webkit-box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
+          box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
+  border-top: 3px solid #4b70eb;
+  border-left: 3px solid #4b70eb;
+  background-color: #183494;
+}
+
+input[type=button].btn-solid:disabled {
+  background-color: #c3c3c3;
+  cursor: default;
+}
+
+input[type=button].btn-line {
+  min-width: 56px;
+  height: 30px;
+  padding: 0 14px;
+  border: 1px solid #c3c3c3;
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.14;
+  letter-spacing: -0.35px;
+  color: #414141;
+}
+
+input[type=button].btn-line.large {
+  min-width: 76px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.88;
+  letter-spacing: -0.4px;
+  color: #414141;
+}
+
+input[type=button].btn-line.has-bg {
+  background-color: #f9f9f9;
+}
+
+input[type=button].btn-line:hover:not([disabled]), input[type=button].btn-line:active:not([disabled]), input[type=button].btn-line.hover {
+  border-color: #414141;
+}
+
+input[type=button].btn-line:disabled {
+  border-color: #dedede;
+  cursor: default;
+}
+
+input[type=button].btn-box {
+  min-width: 90px;
+  height: 45px;
+  padding: 0 21px;
+  background-color: #4b70eb;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+input[type=button].btn-box.large {
+  min-width: 130px;
+  height: 60px;
+  padding: 0px 30px;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: -0.76px;
+  color: #ffffff;
+}
+
+input[type=button].btn-box.large.grad-orange {
+  background: linear-gradient(344deg, #ff793e 58%, #ffc16e);
+}
+
+input[type=button].btn-box.small {
+  min-width: 50px;
+  height: 30px;
+  border-radius: 4px;
+  padding: 0 11px;
+}
+
+input[type=button].btn-box.line {
+  border: 1px solid #c3c3c3;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: normal;
+  color: #414141;
+}
+
+input[type=button].btn-box.icon-prev {
+  padding-left: 50px;
+  background: url("../../img/icn_form_checkbox.svg") no-repeat 30px center #727685;
+}
+
+input[type=button].btn-box.icon-member {
+  padding-left: 56px;
+  background: url("../../img/icn_form_calendar.svg") no-repeat 30px center #ffffff;
+}
+
+input[type=button].btn-box.icon-plus {
+  padding-left: 24.5px;
+  background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center #ffffff;
+}
+
+a[class*=btn-text] {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.69;
+  letter-spacing: -0.32px;
+  color: #868686;
+}
+
+a[class*=btn-text][class*=-small] {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.86;
+  letter-spacing: -0.56px;
+  color: #868686;
+}
+
+.sub-wrap {
+  padding: 50px;
+  background-color: #f4f7ff;
+}
+
+.content-sec {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.content-sec h3 {
+  margin-bottom: 21px;
+}
+
+.content-con {
+  padding: 40px;
+  background-color: #ffffff;
 }
