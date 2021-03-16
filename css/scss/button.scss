@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import 'font.scss';
+
+
+/*-------------------------------------------------------------------
+    @Button
+-------------------------------------------------------------------*/
+input[type=button] {
+    &.btn-solid {
+        display: inline-block;
+        min-width: 180px;
+        height: 70px;
+        background-color: $color-main;
+        border-radius: 10px;
+        cursor: pointer;
+        @include fontStyler(16px, bold, 1.88, -0.4px, $color-ff);
+        &:hover:not([disabled]), 
+        &:active:not([disabled]),
+        &.hover {
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
+            border-top: 3px solid $color-main;
+            border-left: 3px solid $color-main;
+            background-color: #183494;
+        }
+        &:disabled {
+            background-color: $color-c3;
+            cursor: default;
+        }
+    }
+
+    &.btn-line {
+        min-width: 56px;
+        height: 30px;
+        padding: 0 14px;
+        border: 1px solid $color-c3;
+        border-radius: 4px;
+        @include fontStyler(14px, 500, 2.14, -0.35px, $color-41);
+        &.big {
+            
+        }
+        &.has-bg {
+
+        }
+        &:hover:not([disabled]), 
+        &:active:not([disabled]),
+        &.hover {
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
+            border-top: 3px solid $color-main;
+            border-left: 3px solid $color-main;
+            background-color: #183494;
+        }
+        &:disabled {
+            background-color: $color-c3;
+            cursor: default;
+        }
+    }
+}
