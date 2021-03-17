@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- libs - Datepicker, selectbox -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/libs/jquery.selectric.js"></script>
+    <link rel="stylesheet" href="../../css/libs/selectric.css">
+    <!-- // libs - Datepicker, selectbox -->
+
+    <script src="../js/sub.js"></script>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/sub.css">
     <title>신청 - 임시</title>
@@ -14,9 +23,114 @@
     <main>
         <div class="sub-wrap">
             <section class="content-sec">
-                <h3>등기할 사항 입력</h3>
-                <div class="content-con">
-                    
+                <div class="sec-head has-border">
+                    <h4>등기 기본정보</h4>
+                </div>
+                <div class="sec-body">
+                    <ul class="form-con">
+                        <li>
+                            <div class="form-title">
+                                <label for="type00" class="font14 mr10">등기유형</label>
+                                <span class="font-small12">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <input type="text" name="" id="type00" class="w340 mb5" value="소유권 이전" readonly>
+                                <br/>
+                                <span class="checkbox-con">
+                                    <input type="checkbox" name="" id="type01">
+                                    <label for="type01">
+                                        ‘매매’ 또는 ‘신탁재산의 귀속’ 등기원인을 선택하여 신탁등기를 말소합니다.
+                                    </label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="type02" class="font14 mr10">등기원인</label>
+                                <span class="font-small12">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <span class="select-con w340 mr8">
+                                    <select name="" id="type02" class="custom-select">
+                                        <option value="매매1">매매1</option>
+                                        <option value="매매2">매매2</option>
+                                        <option value="매매3">매매3</option>
+                                    </select>
+                                </span>
+                                <input type="text" name="" id="" class="w408" placeholder="상세등기원인이 있을 시 내용을 입력해 주세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="type03" class="font14 mr10">등기일자</label>
+                                <span class="font-small12">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <span class="datepicker-con">
+                                    <input type="text" name="" id="type03" class="datepicker w340">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="type04" class="font14 mr10">잔금납부일</label>
+                                <span class="font-small12">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <span class="datepicker-con">
+                                    <input type="text" name="" id="type04" class="datepicker w340">
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-sec">
+                <div class="sec-head has-btn">
+                    <div class="left-con">
+                        <h4 class="mr9">등기의무자</h4>
+                        <span class="font14 total-cnt mr17">총 <span>3</span>건</span>
+                        <input type="button" class="btn-line icon-plus" value="추가">
+                    </div>
+                    <div class="right-con">
+                        <input type="button" class="btn-line mr7" value="선택 삭제">
+                        <input type="button" class="btn-line icon-plus mr7" value="엑셀 다운로드">
+                        <input type="button" class="btn-line" value="대위자 등록">
+                    </div>
+                </div>
+                <div class="sec-body">
+                    <div class="table-con">
+                        <table class="table-list" summary="등기의무자 리스트입니다.">
+                            <caption>등기의무자</caption>
+                            <colgroup>
+                                <col style="width: 50px;">
+                                <col style="width: 180px;">
+                                <col style="width: auto;">
+                                <col style="width: 90px;">
+                                <col style="width: 90px;">
+                                <col style="width: 90px;">
+                                <col style="width: 90px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <span class="checkbox-con">
+                                            <input type="checkbox" name="" id="cbox00"><label for="cbox00"></label>
+                                        </span>
+                                    </th>
+                                    <th scope="col">성명 (등록번호)</th>
+                                    <th scope="col">주소</th>
+                                    <th scope="col">소유형태</th>
+                                    <th scope="col">현재지분</th>
+                                    <th scope="col">이전지분</th>
+                                    <th scope="col">대표자/기관</th>
+                                    <th scope="col">등기필 정보</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </section>
         </div>
