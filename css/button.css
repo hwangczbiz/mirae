@@ -72,6 +72,16 @@ input[type=button].btn-line:disabled {
   cursor: default;
 }
 
+input[type=button].btn-line.icon-member {
+  padding-left: 56px;
+  background: url("../../img/icn_form_calendar.svg") no-repeat 30px center #ffffff;
+}
+
+input[type=button].btn-line.icon-plus {
+  padding-left: 24.5px;
+  background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center #ffffff;
+}
+
 input[type=button].btn-box {
   min-width: 90px;
   height: 45px;

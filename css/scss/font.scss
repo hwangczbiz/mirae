@@ -15,6 +15,10 @@ h4 { @include fontStyler(24px, bold, 1.5, -1.2px) }
 .font15 { @include fontStyler(15px, bold, 1.6, -0.3px) }
 .font14 { @include fontStyler(14px, bold, 1.57, -0.28px) }
 /* Button */
-.btn-font19 { @include fontStyler(19px, bold, 1.58, -0.38px) }
-.btn-font16 { @include fontStyler(16px, bold, 1.56, -0.32px) }
-.btn-font14 { @include fontStyler(14px, bold, 1.57, -0.28px) }
+.font-btn19 { @include fontStyler(19px, bold, 1.58, -0.38px) }
+.font-btn16 { @include fontStyler(16px, bold, 1.56, -0.32px) }
+.font-btn14 { @include fontStyler(14px, bold, 1.57, -0.28px) }
+/* Small */
+.font-small12 { @include fontStyler(12px, 500, normal, normal) }
+
+.fw-500 {font-weight: 500;}

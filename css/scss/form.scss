@@ -19,6 +19,7 @@ input[type=date]
     border: 1px solid $color-e8;
     border-radius: 5px;
     background-color: $color-ff;
+    vertical-align: middle;
     outline: 0;
     @include fontStyler(15px, 500, 36px, normal, #101416);
 }
@@ -71,21 +72,29 @@ input::placeholder, textarea::placeholder {
 }
 
 /* select */
-select {
-    width: 250px;
-    height: 40px;
-    padding: 0px 15px;
-    border: 1px solid $color-e8;
-    border-radius: 5px;
-    @include fontStyler(15px, normal, 2.4, normal, $color-1d);
-    option {
-        font-size: 20px;
-        padding: 10px;
+.select-con {
+    min-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    select {
+        width: 100%;
+        height: 40px;
+        padding: 0px 15px;
+        border: 1px solid $color-e8;
+        border-radius: 5px;
+        vertical-align: middle;
+        @include fontStyler(15px, normal, 2.4, normal, $color-1d);
+        option {
+            font-size: 20px;
+            padding: 10px;
+        }
     }
 }
 .selectric-wrapper {
-    width: 250px;
+    width: 100%;
     height: 40px;
+    display: inline-block;
+    vertical-align: middle;
     .selectric {
         border: 1px solid $color-e8;
         border-radius: 5px;
@@ -145,6 +154,7 @@ select {
 .radio-con {
     display: inline-block;
     position: relative;
+    vertical-align: middle;
     input[type=radio] {
         width: 21px;
         height: 21px;
@@ -234,6 +244,7 @@ select {
 .checkbox-con {
     display: inline-block;
     position: relative;
+    vertical-align: middle;
     input[type=checkbox] {
         width: 21px;
         height: 21px;
@@ -288,6 +299,7 @@ select {
 .datepicker-con {
     display: inline-block;
     position: relative;
+    vertical-align: middle;
     input[type=text] {
         padding-left: 44px;
         font-family: "Roboto";
@@ -301,6 +313,7 @@ select {
     }
 }
 .ui-datepicker {
+    display: none;
     width: 334px;
     margin-top: 2px;
     padding: 19px 31px;
@@ -352,7 +365,7 @@ select {
         font-family: "Noto Sans KR";
         @include fontStyler(16px, bold, 24px, -0.4px, $color-1d);
         &:first-child {
-            color: $color-dc;
+            color: $color-error;
         }
     }
     td {
@@ -362,7 +375,7 @@ select {
             opacity: .3;
         }
         &:first-child {
-            color: $color-dc;
+            color: $color-error;
         }
         .ui-state-default {
             display: inline-block;

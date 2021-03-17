@@ -55,6 +55,14 @@ input[type=button] {
             border-color: #dedede;
             cursor: default;
         }
+        &.icon-member {
+            padding-left: 56px;
+            background: url("../../img/icn_form_calendar.svg") no-repeat 30px center $color-ff;
+        }
+        &.icon-plus {
+            padding-left: 24.5px;
+            background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center $color-ff;
+        }
     }
 
     &.btn-box {
