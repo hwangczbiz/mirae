@@ -27,6 +27,23 @@ input[type=button] {
             background-color: $color-c3;
             cursor: default;
         }
+        &.large {
+            min-width: 130px;
+            height: 60px;
+            padding: 0px 30px;
+            border-radius: 10px;
+            @include fontStyler(19px, 500, 1.42, -0.76px, $color-ff);
+            &.grad-orange {
+                background: linear-gradient(344deg, $color-sub3 58%, #ffc16e);
+            }
+        }
+        &.small {
+            min-width: 50px;
+            height: 30px;
+            border-radius: 4px;
+            padding: 0 11px;
+            @include fontStyler(14px, 500, 1.71, normal, $color-ff);
+        }
     }
 
     &.btn-line {
@@ -52,7 +69,7 @@ input[type=button] {
             border-color: $color-41;
         }
         &:disabled {
-            border-color: #dedede;
+            border-color: $color-de;
             cursor: default;
         }
         &.icon-member {
@@ -61,7 +78,11 @@ input[type=button] {
         }
         &.icon-plus {
             padding-left: 24.5px;
-            background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center $color-ff;
+            background: url("../../img/btn_ico_add_s.svg") no-repeat 11px center $color-ff;
+        }
+        &.icon-download {
+            padding-left: 24.5px;
+            background: url("../../img/btn_ico_download_s.svg") no-repeat 11px center $color-ff;
         }
     }
 
@@ -80,7 +101,7 @@ input[type=button] {
             border-radius: 10px;
             @include fontStyler(19px, 500, 1.42, -0.76px, $color-ff);
             &.grad-orange {
-                background: linear-gradient(344deg, #ff793e 58%, #ffc16e);
+                background: linear-gradient(344deg, $color-sub3 58%, #ffc16e);
             }
         }
         &.small {
@@ -88,11 +109,11 @@ input[type=button] {
             height: 30px;
             border-radius: 4px;
             padding: 0 11px;
+            @include fontStyler(14px, 500, 1.71, normal, $color-41);
         }
         &.line {
             border: 1px solid $color-c3;
             background-color: $color-ff;
-            @include fontStyler(14px, 500, 1.71, normal, $color-41);
         }
         &.icon-prev {
             padding-left: 50px;

@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mixin.scss';
+
+
+/*-------------------------------------------------------------------
+    @Table
+-------------------------------------------------------------------*/
+/* List */
+.table-con {
+    width: 100%;
+}
+table.table-list {
+    width: 100%;
+    th, td {
+        text-align: center;
+        border-left: 1px solid $color-ed;
+        border-bottom: 1px solid $color-ed;
+        &:first-child {
+            border-left: none;
+        }
+    }
+    thead th {
+        padding: 12px 10px 11px;
+        border-top: 2px solid $color-1d;
+        border-bottom: none;
+        background-color: $color-f7;
+        color: $color-5a;
+        @include fontStyler(14px, normal, 17px, -0.56px, $color-5a);
+    }
+    td {
+        padding: 12px 10px 16px;
+        @include fontStyler(15px, normal, 22px, normal, $color-41);
+        &.has-btn {
+            padding: 9px 10px 11px;
+        }
+    }
+}
+

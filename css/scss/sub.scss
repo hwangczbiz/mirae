@@ -2,7 +2,27 @@
 @import 'font.scss';
 @import 'form.scss';
 @import 'button.scss';
+@import 'table.scss';
 
+
+.color-main {color: $color-main;}
+.color-sub1 {color: $color-sub1;}
+.color-sub2 {color: $color-sub2;}
+.color-sub3 {color: $color-sub3;}
+.color-error {color: $color-error;}
+.color-error-input {color: $color-error-input;}
+.color-ff {color: $color-ff;}
+.color-f7 {color: $color-f7;}
+.color-ed {color: $color-ed;}
+.color-de {color: $color-de;}
+.color-c3 {color: $color-c3;}
+.color-a8 {color: $color-a8;}
+.color-86 {color: $color-86;}
+.color-5a {color: $color-5a;}
+.color-41 {color: $color-41;}
+.color-1d {color: $color-1d;}
+.color-00 {color: $color-00;}
+.color-e8 {color: $color-e8;}
 
 .sub-wrap {
     padding: 42px 40px;
@@ -12,10 +32,7 @@
     margin-bottom: 60px;
 }
 .sec-head {
-    &.has-border {
-        padding-bottom: 12px;
-        border-bottom: 2px solid $color-1d;
-    }
+    margin-bottom: 15px;
     &.has-btn {
         display: flex;
         align-items: baseline;
@@ -36,9 +53,11 @@
     }
 }
 .sec-body{
-    margin-top: 25px;
+    
 }
 .form-con {
+    padding-top: 25px;
+    border-top: 2px solid $color-1d;
     > li {
         display: flex;
         align-items: baseline;
@@ -82,4 +101,5 @@
 .mr10 {margin-right: 10px !important;}
 .mr17 {margin-right: 17px !important;}
 .mr20 {margin-right: 20px !important;}
+
 

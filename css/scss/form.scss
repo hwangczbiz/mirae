@@ -45,7 +45,7 @@ input[type=date].error
 {
     color: $color-1d;
     background-color: $color-error-input;
-    border-color: #e4344a;
+    border-color: $color-error;
     + span.error-msg {
         display: block;
         margin-top: 5px;
@@ -116,7 +116,7 @@ input::placeholder, textarea::placeholder {
         border: 1px solid $color-e8;
         border-radius: 5px;
         box-shadow: none;
-        background-color: #fff;
+        background-color: $color-ff;
         li {
             padding: 0px 15px;
             @include fontStyler(15px, normal, 2.87, normal, $color-1d)
@@ -208,6 +208,9 @@ input::placeholder, textarea::placeholder {
         cursor: pointer;
         @include fontStyler(15px, normal, 21px, normal, $color-1d);
     }
+    &.only-box label {
+        padding-left: 0;
+    }
 }
 /* radio 버튼형 */
 .radio-btn-con {
@@ -293,6 +296,9 @@ input::placeholder, textarea::placeholder {
         cursor: pointer;
         @include fontStyler(15px, normal, 21px, normal, $color-1d);
     }
+    &.only-box label {
+        padding-left: 0;
+    }
 }
 
 /* datepicker */
@@ -335,25 +341,26 @@ input::placeholder, textarea::placeholder {
         .ui-datepicker-next {
             position: absolute;
             top: 0;
+            cursor: pointer;
         }
         .ui-datepicker-prev {
-            left: 0;
+            left: -14px;
             .ui-icon {
                 display: inline-block;
-                width: 9px;
-                height: 16px;
+                width: 40px;
+                height: 40px;
                 text-indent: -99999px;
-                background: url("../img/icn_form_calendar.svg") no-repeat center;
+                background: url("../../img/btn_arrow_calendar_prev.svg") no-repeat center;
             }
         }
         .ui-datepicker-next {
-            right: 0;
+            right: -14px;
             .ui-icon {
                 display: inline-block;
-                width: 9px;
-                height: 16px;
+                width: 40px;
+                height: 40px;
                 text-indent: -99999px;
-                background: url("../../img/icn_form_calendar.svg") no-repeat center;
+                background: url("../../img/btn_arrow_calendar_next.svg") no-repeat center;
             }
         }
     }

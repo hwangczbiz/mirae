@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Table
+-------------------------------------------------------------------*/
+/* List */
+.table-con {
+  width: 100%;
+}
+
+table.table-list {
+  width: 100%;
+}
+
+table.table-list th, table.table-list td {
+  text-align: center;
+  border-left: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+table.table-list th:first-child, table.table-list td:first-child {
+  border-left: none;
+}
+
+table.table-list thead th {
+  padding: 12px 10px 11px;
+  border-top: 2px solid #1d1d1d;
+  border-bottom: none;
+  background-color: #f7f7f7;
+  color: #5a5a5a;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 17px;
+  letter-spacing: -0.56px;
+  color: #5a5a5a;
+}
+
+table.table-list td {
+  padding: 12px 10px 16px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #414141;
+}
+
+table.table-list td.has-btn {
+  padding: 9px 10px 11px;
+}

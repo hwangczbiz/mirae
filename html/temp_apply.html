@@ -23,8 +23,10 @@
     <main>
         <div class="sub-wrap">
             <section class="content-sec">
-                <div class="sec-head has-border">
-                    <h4>등기 기본정보</h4>
+                <div class="sec-head">
+                    <div class="left-con">
+                        <h4>등기 기본정보</h4>
+                    </div>
                 </div>
                 <div class="sec-body">
                     <ul class="form-con">
@@ -95,7 +97,7 @@
                     </div>
                     <div class="right-con">
                         <input type="button" class="btn-line mr7" value="선택 삭제">
-                        <input type="button" class="btn-line icon-plus mr7" value="엑셀 다운로드">
+                        <input type="button" class="btn-line icon-download mr7" value="엑셀 다운로드">
                         <input type="button" class="btn-line" value="대위자 등록">
                     </div>
                 </div>
@@ -104,8 +106,8 @@
                         <table class="table-list" summary="등기의무자 리스트입니다.">
                             <caption>등기의무자</caption>
                             <colgroup>
-                                <col style="width: 50px;">
-                                <col style="width: 180px;">
+                                <col style="width: 41px;">
+                                <col style="width: 190px;">
                                 <col style="width: auto;">
                                 <col style="width: 90px;">
                                 <col style="width: 90px;">
@@ -116,8 +118,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">
-                                        <span class="checkbox-con">
-                                            <input type="checkbox" name="" id="cbox00"><label for="cbox00"></label>
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="cbox01"><label for="cbox01"></label>
                                         </span>
                                     </th>
                                     <th scope="col">성명 (등록번호)</th>
@@ -129,6 +131,40 @@
                                     <th scope="col">등기필 정보</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="cbox02"><label for="cbox02"></label>
+                                        </span>
+                                    </td>
+                                    <td>김등기 (719191-1234567)</td>
+                                    <td>서울특별시 영등포구 여의나루로 57</td>
+                                    <td>소유</td>
+                                    <td class="font-roboto">1/2</td>
+                                    <td class="font-roboto">1/2</td>
+                                    <td>공지철</td>
+                                    <td>
+                                        <span class="color-main">검증완료</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="cbox03"><label for="cbox03"></label>
+                                        </span>
+                                    </td>
+                                    <td>김등기 (719191-1234567)</td>
+                                    <td>서울특별시 영등포구 여의나루로 57</td>
+                                    <td>소유</td>
+                                    <td class="font-roboto">1/2</td>
+                                    <td class="font-roboto">1/2</td>
+                                    <td>공지철</td>
+                                    <td class="has-btn">
+                                        <input type="button" name="" id="" class="btn-solid small" value="검증">
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
