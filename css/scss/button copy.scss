@@ -1,0 +1,139 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mixin.scss';
+
+
+/*-------------------------------------------------------------------
+    @Button
+-------------------------------------------------------------------*/
+input[type=button] {
+    &.btn-solid {
+        display: inline-block;
+        min-width: 180px;
+        height: 70px;
+        background-color: $color-main;
+        border-radius: 10px;
+        cursor: pointer;
+        @include fontStyler(16px, bold, 1.88, -0.4px, $color-ff);
+        &:hover:not([disabled]), 
+        &:active:not([disabled]),
+        &.hover {
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
+            border-top: 3px solid $color-main;
+            border-left: 3px solid $color-main;
+            background-color: #183494;
+        }
+        &:disabled {
+            background-color: $color-c3;
+            cursor: default;
+        }
+        &.large {
+            min-width: 130px;
+            height: 60px;
+            padding: 0px 30px;
+            border-radius: 10px;
+            @include fontStyler(19px, 500, 1.42, -0.76px, $color-ff);
+            &.grad-orange {
+                background: linear-gradient(344deg, $color-grad-orange1 58%, $color-grad-orange2);
+            }
+        }
+        &.small {
+            min-width: 50px;
+            height: 30px;
+            border-radius: 4px;
+            padding: 0 11px;
+            @include fontStyler(14px, 500, 1.71, normal, $color-ff);
+        }
+    }
+
+    &.btn-line {
+        min-width: 56px;
+        height: 30px;
+        padding: 0 14px;
+        border: 1px solid $color-c3;
+        border-radius: 4px;
+        background-color: $color-ff;
+        cursor: pointer;
+        @include fontStyler(14px, 500, 2.14, -0.35px, $color-41);
+        &.large {
+            min-width: 76px;
+            height: 45px;
+            @include fontStyler(16px, 500, 1.88, -0.4px, $color-41);
+        }
+        &.has-bg {
+            background-color: #f9f9f9;
+        }
+        &:hover:not([disabled]), 
+        &:active:not([disabled]),
+        &.hover {
+            border-color: $color-41;
+        }
+        &:disabled {
+            border-color: $color-de;
+            cursor: default;
+        }
+        &.icon-member {
+            padding-left: 56px;
+            background: url("../../img/icn_form_calendar.svg") no-repeat 30px center $color-ff;
+        }
+        &.icon-plus {
+            padding-left: 24.5px;
+            background: url("../../img/btn_ico_add_s.svg") no-repeat 11px center $color-ff;
+        }
+        &.icon-download {
+            padding-left: 24.5px;
+            background: url("../../img/btn_ico_download_s.svg") no-repeat 11px center $color-ff;
+        }
+    }
+
+    &.btn-box {
+        min-width: 90px;
+        height: 45px;
+        padding: 0 21px;
+        background-color: $color-main;
+        border-radius: 5px;
+        cursor: pointer;
+        @include fontStyler(15px, 500, 1.6, normal, $color-ff);
+        &.large {
+            min-width: 130px;
+            height: 60px;
+            padding: 0px 30px;
+            border-radius: 10px;
+            @include fontStyler(19px, 500, 1.42, -0.76px, $color-ff);
+            &.grad-orange {
+                background: linear-gradient(344deg, $color-grad-orange1 58%, $color-grad-orange2);
+            }
+        }
+        &.small {
+            min-width: 50px;
+            height: 30px;
+            border-radius: 4px;
+            padding: 0 11px;
+            @include fontStyler(14px, 500, 1.71, normal, $color-41);
+        }
+        &.line {
+            border: 1px solid $color-c3;
+            background-color: $color-ff;
+        }
+        &.icon-prev {
+            padding-left: 50px;
+            background: url("../../img/icn_form_checkbox.svg") no-repeat 30px center #727685;
+        }
+        &.icon-member {
+            padding-left: 56px;
+            background: url("../../img/icn_form_calendar.svg") no-repeat 30px center $color-ff;
+        }
+        &.icon-plus {
+            padding-left: 24.5px;
+            background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center $color-ff;
+        }
+    }
+}
+
+a[class*=btn-text] {
+    display: inline-block;
+    @include fontStyler(16px, 500, 1.69, -0.32px, $color-86);
+    &[class*=-small] {
+        @include fontStyler(14px, normal, 1.86, -0.56px, $color-86);
+    }
+}

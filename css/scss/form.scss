@@ -16,12 +16,11 @@ input[type=date]
     width: 250px;
     height: 40px;
     padding: 1px 15px;
-    border: 1px solid $color-e8;
     border-radius: 5px;
     background-color: $color-ff;
     vertical-align: middle;
     outline: 0;
-    @include fontStyler(15px, 500, 36px, normal, #101416);
+    @include fontStyler(15px, 500, 36px, normal, $color-1d);
 }
 input[type=text]:read-only,
 input[type=password]:read-only,
@@ -163,7 +162,7 @@ input::placeholder, textarea::placeholder {
         &:checked {
             + label {
                 &::before {
-                    border: 7px solid $color-main;
+                    border: 7px solid $color-sub1;
                 }
             }
         }
@@ -225,7 +224,7 @@ input::placeholder, textarea::placeholder {
         &:checked {
             + label {
                 color: $color-ff;
-                background-color: $color-main;
+                background-color: $color-sub1;
                 border-right-color: $color-c3;
             }
         }
@@ -235,7 +234,7 @@ input::placeholder, textarea::placeholder {
         padding: 11px 21px 12px;
         border-right: 1px solid $color-c3;
         cursor: pointer;
-        @include fontStyler(15px, normal, 22px, normal, $color-1d);
+        @include fontStyler(15px, normal, 22px, normal, $color-5a);
         &:last-child {
             border: none;
         }
@@ -256,8 +255,8 @@ input::placeholder, textarea::placeholder {
         &:checked {
             + label {
                 &::before {
-                    border-color: $color-main;
-                    background: $color-main url("../../img/icn_form_checkbox.svg") no-repeat center center;
+                    border-color: $color-sub1;
+                    background: $color-sub1 url("../../img/icn_form_checkbox.svg") no-repeat center center;
                 }
             }
         }
@@ -377,7 +376,7 @@ input::placeholder, textarea::placeholder {
     }
     td {
         text-align: center;
-        @include fontStyler(16px, normal, 2.75, -0.8px, #5a5a5a);
+        @include fontStyler(16px, normal, 2.75, -0.8px, $color-5a);
         &.ui-state-disabled {
             opacity: .3;
         }
@@ -396,7 +395,7 @@ input::placeholder, textarea::placeholder {
             text-align: center;
             &.ui-state-active {
                 color: $color-ff;
-                background-color: $color-main;
+                background-color: $color-sub1;
                 border-radius: 50%;
                 font-weight: bold;
             }

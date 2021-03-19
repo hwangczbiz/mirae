@@ -1,4 +1,132 @@
 @charset "UTF-8";
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Font
+-------------------------------------------------------------------*/
+/* Font-family */
+.ff-noto {
+  font-family: "Noto Sans KR" !important;
+}
+
+.ff-roboto {
+  font-family: "Roboto" !important;
+  letter-spacing: normal !important;
+}
+
+/* Heading */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -2.4px;
+  color: #000000;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.38;
+  letter-spacing: -2px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.6px;
+  color: #000000;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.2px;
+  color: #000000;
+}
+
+h1.ff-roboto, h2.ff-roboto, h3.ff-roboto, h4.ff-roboto {
+  font-weight: bold;
+}
+
+/* Body */
+.fs-18 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.56;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.fs-15 {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
+.fs-14 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000;
+}
+
+.fs-12 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+/* Button */
+.fs-btn-19 {
+  font-size: 19px;
+  font-weight: normal;
+  line-height: 1.58;
+  letter-spacing: -0.38px;
+  color: #000000;
+}
+
+.fs-btn-16 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.56;
+  letter-spacing: -0.32px;
+  color: #000000;
+}
+
+.fs-btn-14 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000;
+}
+
+.fs-18.ff-roboto, .fs-15.ff-roboto, .fs-14.ff-roboto, .fs-12.ff-roboto,
+.fs-btn-19.ff-roboto, .fs-btn-16.ff-roboto, .fs-btn-14.ff-roboto {
+  font-weight: normal;
+}
+
+/* Font-weight */
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-bold {
+  font-weight: bold !important;
+}
+
 /* 스타일가이드 양식 */
 main {
   padding: 20px;
@@ -12,7 +140,7 @@ section > * {
   margin-bottom: 20px;
 }
 
-section > h2:first-child {
+section > h2:first-child, section > * h2 {
   margin-bottom: 20px;
 }
 
@@ -28,4 +156,16 @@ ul.list_con > li {
 
 ul.list_con > li p.label {
   width: 100px;
+}
+
+.flex-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-con > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }

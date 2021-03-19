@@ -4,136 +4,104 @@
 
 
 /*-------------------------------------------------------------------
-    @Button
+    @Button 
+    - Size: default: small(50x30) 별도 클래스 없음 / .large, .medium 으로 사이즈 조절
+    - Style: default: line 별도 클래스 없음 / .solid, .icon- 으로 스타일링
 -------------------------------------------------------------------*/
-input[type=button] {
-    &.btn-solid {
-        display: inline-block;
-        min-width: 180px;
-        height: 70px;
-        background-color: $color-main;
-        border-radius: 10px;
-        cursor: pointer;
-        @include fontStyler(16px, bold, 1.88, -0.4px, $color-ff);
-        &:hover:not([disabled]), 
-        &:active:not([disabled]),
-        &.hover {
-            box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
-            border-top: 3px solid $color-main;
-            border-left: 3px solid $color-main;
-            background-color: #183494;
-        }
-        &:disabled {
-            background-color: $color-c3;
-            cursor: default;
-        }
-        &.large {
-            min-width: 130px;
-            height: 60px;
-            padding: 0px 30px;
-            border-radius: 10px;
-            @include fontStyler(19px, 500, 1.42, -0.76px, $color-ff);
-            &.grad-orange {
-                background: linear-gradient(344deg, $color-sub3 58%, #ffc16e);
-            }
-        }
-        &.small {
-            min-width: 50px;
-            height: 30px;
-            border-radius: 4px;
-            padding: 0 11px;
-            @include fontStyler(14px, 500, 1.71, normal, $color-ff);
-        }
+/* input button */
+input[type=button][class*=btn] {
+    min-width: 50px;
+    height: 30px;
+    padding: 0px 11px;
+    border: 1px solid $color-c3;
+    border-radius: 5px;
+    background-color: $color-ff;
+    cursor: pointer;
+    // transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
+    @include fontStyler(14px, 500, 1.71, normal, $color-86);
+    // hover, active
+    &.hover:not([disabled]),
+    &:hover:not([disabled]), 
+    &:active:not([disabled]) {
+        color: $color-41;
+        border-color: $color-41;
+    }
+    // disabled
+    &:disabled {
+        color: $color-c3;
+        border-color: $color-de;
     }
 
-    &.btn-line {
-        min-width: 56px;
-        height: 30px;
-        padding: 0 14px;
-        border: 1px solid $color-c3;
-        border-radius: 4px;
-        background-color: $color-ff;
-        cursor: pointer;
-        @include fontStyler(14px, 500, 2.14, -0.35px, $color-41);
-        &.large {
-            min-width: 76px;
-            height: 45px;
-            @include fontStyler(16px, 500, 1.88, -0.4px, $color-41);
-        }
-        &.has-bg {
-            background-color: #f9f9f9;
-        }
-        &:hover:not([disabled]), 
-        &:active:not([disabled]),
-        &.hover {
-            border-color: $color-41;
-        }
-        &:disabled {
-            border-color: $color-de;
-            cursor: default;
-        }
-        &.icon-member {
-            padding-left: 56px;
-            background: url("../../img/icn_form_calendar.svg") no-repeat 30px center $color-ff;
-        }
-        &.icon-plus {
-            padding-left: 24.5px;
-            background: url("../../img/btn_ico_add_s.svg") no-repeat 11px center $color-ff;
-        }
-        &.icon-download {
-            padding-left: 24.5px;
-            background: url("../../img/btn_ico_download_s.svg") no-repeat 11px center $color-ff;
-        }
-    }
-
-    &.btn-box {
+    // size
+    &.medium {
         min-width: 90px;
         height: 45px;
-        padding: 0 21px;
-        background-color: $color-main;
-        border-radius: 5px;
-        cursor: pointer;
-        @include fontStyler(15px, 500, 1.6, normal, $color-ff);
-        &.large {
-            min-width: 130px;
-            height: 60px;
-            padding: 0px 30px;
-            border-radius: 10px;
-            @include fontStyler(19px, 500, 1.42, -0.76px, $color-ff);
-            &.grad-orange {
-                background: linear-gradient(344deg, $color-sub3 58%, #ffc16e);
-            }
-        }
-        &.small {
-            min-width: 50px;
-            height: 30px;
-            border-radius: 4px;
-            padding: 0 11px;
-            @include fontStyler(14px, 500, 1.71, normal, $color-41);
-        }
-        &.line {
-            border: 1px solid $color-c3;
-            background-color: $color-ff;
-        }
-        &.icon-prev {
-            padding-left: 50px;
-            background: url("../../img/icn_form_checkbox.svg") no-repeat 30px center #727685;
-        }
-        &.icon-member {
-            padding-left: 56px;
-            background: url("../../img/icn_form_calendar.svg") no-repeat 30px center $color-ff;
-        }
-        &.icon-plus {
-            padding-left: 24.5px;
-            background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center $color-ff;
+        padding: 0px 16px;
+        @include fontStyler(16px, 500, 1.31, normal, $color-41);
+        &:disabled {
+            color: $color-c3;
         }
     }
-}
+    &.large {
+        min-width: 130px;
+        height: 60px;
+        padding: 0px 24px;
+        border-radius: 10px;    
+        @include fontStyler(19px, bold, 1.31, normal, $color-41);
+        &:disabled {
+            color: $color-c3;
+        }
+    }
 
+    // style
+    &[class*=-solid] {
+        color: $color-ff;
+        border: none;
+        background-color: $color-main;
+        // hover, active
+        &.hover:not([disabled]),
+        &:hover:not([disabled]), 
+        &:active:not([disabled]) {
+            color: $color-ff;
+            background-color: mix($color-main, rgba(0, 0, 0, 1), 65%);
+        }
+        // disabled
+        &:disabled {
+            color: $color-ff;
+            background-color: $color-c3;
+        }
+    }
+
+    // icon
+    &.icon-member {
+        padding-left: 39px;
+        background: url("../../img/btn_micon_person.svg") no-repeat 16px center;
+    }
+    &.icon-plus {
+        padding-left: 39px;
+        background: url("../../img/btn_sicon_add.svg") no-repeat 16px center;
+    }
+    &.icon-download {
+        padding-left: 39px;
+        background: url("../../img/btn_sicon_download.svg") no-repeat 16px center;
+    }
+}
+/* text button */
 a[class*=btn-text] {
     display: inline-block;
     @include fontStyler(16px, 500, 1.69, -0.32px, $color-86);
     &[class*=-small] {
         @include fontStyler(14px, normal, 1.86, -0.56px, $color-86);
+    }
+    &:hover, &.hover {
+        color: $color-41;
+    }
+    &.icon-lock {
+        padding-left: 23px;
+        background: url("../../img/btn_tmicon_findaid.svg") no-repeat left center;
+    }
+    &.icon-next {
+        padding-right: 16px;
+        background: url("../../img/btn_tsicon_arrow_right.svg") no-repeat right center;
     }
 }

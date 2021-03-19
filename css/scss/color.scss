@@ -3,23 +3,36 @@
 /*-------------------------------------------------------------------
     @Color
 -------------------------------------------------------------------*/
-$color-main: #4b70eb;
-$color-sub1: #4a53c6;
-$color-sub2: #ffe662;
-$color-sub3: #ff793e;
-$color-error: #dc3636;
-$color-error-input: #fff5f6;
+$color-main: #4B6CEB;
+$color-sub1: #4A5DC6;
+$color-sub2: #38BAB3;
+$color-sub3: #F88C63;
+$color-sub4: #868FAD;
+$color-sub5: #FEC867;
 
-$color-ff: #ffffff;
-$color-f7: #f7f7f7;
-$color-ed: #ededed;
-$color-de: #dedede;
-$color-c3: #c3c3c3;
-$color-a8: #a8a8a8;
+// Gradation
+$color-grad-blue1: #5B5ECF;
+$color-grad-blue2: #3877DA;
+$color-grad-orange1: #FF793E;
+$color-grad-orange2: #FFC16E;
+
+// Common
+$color-error: #DC3636;
+$color-4d: #4D546C;
+
+// Grayscale
+$color-ff: #FFFFFF;
+$color-f7: #F7F7F7;
+$color-ed: #EDEDED;
+$color-de: #DEDEDE;
+$color-c3: #C3C3C3;
+$color-a8: #A8A8A8;
 $color-86: #868686;
-$color-5a: #5a5a5a;
+$color-5a: #5A5A5A;
 $color-41: #414141;
-$color-1d: #1d1d1d;
+$color-1d: #1D1D1D;
 $color-00: #000000;
 
-$color-e8: #e8e8e8;
+// Input 
+$color-error-input: #FFF5F6;
+$color-e8: #E8E8E8; 

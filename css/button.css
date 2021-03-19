@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-------------------------------------------------------------------
     @Color
 -------------------------------------------------------------------*/
@@ -5,173 +6,99 @@
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-    @Button
+    @Button 
+    - Size: default: small(50x30) 별도 클래스 없음 / .large, .medium 으로 사이즈 조절
+    - Style: default: line 별도 클래스 없음 / .solid, .icon- 으로 스타일링
 -------------------------------------------------------------------*/
-input[type=button].btn-solid {
-  display: inline-block;
-  min-width: 180px;
-  height: 70px;
-  background-color: #4b70eb;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.88;
-  letter-spacing: -0.4px;
-  color: #ffffff;
-}
-
-input[type=button].btn-solid:hover:not([disabled]), input[type=button].btn-solid:active:not([disabled]), input[type=button].btn-solid.hover {
-  -webkit-box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
-          box-shadow: 3px 3px rgba(0, 0, 0, 0.35);
-  border-top: 3px solid #4b70eb;
-  border-left: 3px solid #4b70eb;
-  background-color: #183494;
-}
-
-input[type=button].btn-solid:disabled {
-  background-color: #c3c3c3;
-  cursor: default;
-}
-
-input[type=button].btn-solid.large {
-  min-width: 130px;
-  height: 60px;
-  padding: 0px 30px;
-  border-radius: 10px;
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.42;
-  letter-spacing: -0.76px;
-  color: #ffffff;
-}
-
-input[type=button].btn-solid.large.grad-orange {
-  background: linear-gradient(344deg, #ff793e 58%, #ffc16e);
-}
-
-input[type=button].btn-solid.small {
+/* input button */
+input[type=button][class*=btn] {
   min-width: 50px;
   height: 30px;
-  border-radius: 4px;
-  padding: 0 11px;
+  padding: 0px 11px;
+  border: 1px solid #C3C3C3;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #868686;
 }
 
-input[type=button].btn-line {
-  min-width: 56px;
-  height: 30px;
-  padding: 0 14px;
-  border: 1px solid #c3c3c3;
-  border-radius: 4px;
-  background-color: #ffffff;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 2.14;
-  letter-spacing: -0.35px;
+input[type=button][class*=btn].hover:not([disabled]), input[type=button][class*=btn]:hover:not([disabled]), input[type=button][class*=btn]:active:not([disabled]) {
   color: #414141;
-}
-
-input[type=button].btn-line.large {
-  min-width: 76px;
-  height: 45px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.88;
-  letter-spacing: -0.4px;
-  color: #414141;
-}
-
-input[type=button].btn-line.has-bg {
-  background-color: #f9f9f9;
-}
-
-input[type=button].btn-line:hover:not([disabled]), input[type=button].btn-line:active:not([disabled]), input[type=button].btn-line.hover {
   border-color: #414141;
 }
 
-input[type=button].btn-line:disabled {
-  border-color: #dedede;
-  cursor: default;
+input[type=button][class*=btn]:disabled {
+  color: #C3C3C3;
+  border-color: #DEDEDE;
 }
 
-input[type=button].btn-line.icon-member {
-  padding-left: 56px;
-  background: url("../../img/icn_form_calendar.svg") no-repeat 30px center #ffffff;
-}
-
-input[type=button].btn-line.icon-plus {
-  padding-left: 24.5px;
-  background: url("../../img/btn_ico_add_s.svg") no-repeat 11px center #ffffff;
-}
-
-input[type=button].btn-box {
+input[type=button][class*=btn].medium {
   min-width: 90px;
   height: 45px;
-  padding: 0 21px;
-  background-color: #4b70eb;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
+  padding: 0px 16px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: normal;
-  color: #ffffff;
-}
-
-input[type=button].btn-box.large {
-  min-width: 130px;
-  height: 60px;
-  padding: 0px 30px;
-  border-radius: 10px;
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.42;
-  letter-spacing: -0.76px;
-  color: #ffffff;
-}
-
-input[type=button].btn-box.large.grad-orange {
-  background: linear-gradient(344deg, #ff793e 58%, #ffc16e);
-}
-
-input[type=button].btn-box.small {
-  min-width: 50px;
-  height: 30px;
-  border-radius: 4px;
-  padding: 0 11px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.71;
+  line-height: 1.31;
   letter-spacing: normal;
   color: #414141;
 }
 
-input[type=button].btn-box.line {
-  border: 1px solid #c3c3c3;
-  background-color: #ffffff;
+input[type=button][class*=btn].medium:disabled {
+  color: #C3C3C3;
 }
 
-input[type=button].btn-box.icon-prev {
-  padding-left: 50px;
-  background: url("../../img/icn_form_checkbox.svg") no-repeat 30px center #727685;
+input[type=button][class*=btn].large {
+  min-width: 130px;
+  height: 60px;
+  padding: 0px 24px;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #414141;
 }
 
-input[type=button].btn-box.icon-member {
-  padding-left: 56px;
-  background: url("../../img/icn_form_calendar.svg") no-repeat 30px center #ffffff;
+input[type=button][class*=btn].large:disabled {
+  color: #C3C3C3;
 }
 
-input[type=button].btn-box.icon-plus {
-  padding-left: 24.5px;
-  background: url("../../img/icn_form_checkbox_readonly.svg") no-repeat 11px center #ffffff;
+input[type=button][class*=btn][class*=-solid] {
+  color: #FFFFFF;
+  border: none;
+  background-color: #4B6CEB;
 }
 
+input[type=button][class*=btn][class*=-solid].hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:active:not([disabled]) {
+  color: #FFFFFF;
+  background-color: #314699;
+}
+
+input[type=button][class*=btn][class*=-solid]:disabled {
+  color: #FFFFFF;
+  background-color: #C3C3C3;
+}
+
+input[type=button][class*=btn].icon-member {
+  padding-left: 39px;
+  background: url("../../img/btn_micon_person.svg") no-repeat 16px center;
+}
+
+input[type=button][class*=btn].icon-plus {
+  padding-left: 39px;
+  background: url("../../img/btn_sicon_add.svg") no-repeat 16px center;
+}
+
+input[type=button][class*=btn].icon-download {
+  padding-left: 39px;
+  background: url("../../img/btn_sicon_download.svg") no-repeat 16px center;
+}
+
+/* text button */
 a[class*=btn-text] {
   display: inline-block;
   font-size: 16px;
@@ -187,4 +114,18 @@ a[class*=btn-text][class*=-small] {
   line-height: 1.86;
   letter-spacing: -0.56px;
   color: #868686;
+}
+
+a[class*=btn-text]:hover, a[class*=btn-text].hover {
+  color: #414141;
+}
+
+a[class*=btn-text].icon-lock {
+  padding-left: 23px;
+  background: url("../../img/btn_tmicon_findaid.svg") no-repeat left center;
+}
+
+a[class*=btn-text].icon-next {
+  padding-right: 16px;
+  background: url("../../img/btn_tsicon_arrow_right.svg") no-repeat right center;
 }

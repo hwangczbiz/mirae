@@ -5,20 +5,39 @@
 /*-------------------------------------------------------------------
     @Font
 -------------------------------------------------------------------*/
+/* Font-family */
+.ff-noto { font-family: "Noto Sans KR" !important; }
+.ff-roboto { font-family: "Roboto" !important; letter-spacing: normal !important; }
+
 /* Heading */
 h1 { @include fontStyler(48px, bold, 1.25, -2.4px) }
 h2 { @include fontStyler(40px, bold, 1.38, -2px) }
 h3 { @include fontStyler(32px, bold, 1.5, -1.6px) }
 h4 { @include fontStyler(24px, bold, 1.5, -1.2px) }
-/* Body */
-.font18 { @include fontStyler(18px, bold, 1.56, -0.36px) }
-.font15 { @include fontStyler(15px, bold, 1.6, -0.3px) }
-.font14 { @include fontStyler(14px, bold, 1.57, -0.28px) }
-/* Button */
-.font-btn19 { @include fontStyler(19px, bold, 1.58, -0.38px) }
-.font-btn16 { @include fontStyler(16px, bold, 1.56, -0.32px) }
-.font-btn14 { @include fontStyler(14px, bold, 1.57, -0.28px) }
-/* Small */
-.font-small12 { @include fontStyler(12px, 500, normal, normal) }
+h1, h2, h3, h4 {
+    &.ff-roboto {
+        font-weight: bold;
+    }
+}
 
-.fw-500 {font-weight: 500;}
+/* Body */
+.fs-18 { @include fontStyler(18px, normal, 1.56, -0.36px) }
+.fs-15 { @include fontStyler(15px, normal, 1.6, -0.3px) }
+.fs-14 { @include fontStyler(14px, normal, 1.57, -0.28px) }
+.fs-12 { @include fontStyler(12px, normal, normal, normal) }
+/* Button */
+.fs-btn-19 { @include fontStyler(19px, normal, 1.58, -0.38px) }
+.fs-btn-16 { @include fontStyler(16px, normal, 1.56, -0.32px) }
+.fs-btn-14 { @include fontStyler(14px, normal, 1.57, -0.28px) }
+.fs-18, .fs-15, .fs-14, .fs-12, 
+.fs-btn-19, .fs-btn-16, .fs-btn-14 {
+    &.ff-roboto {
+        font-weight: normal;
+    }
+}
+
+
+/* Font-weight */
+.fw-500 {font-weight: 500 !important;}
+.fw-bold {font-weight: bold !important;}
+

@@ -1,10 +1,14 @@
 @charset "utf-8";
+@import "font.scss";
+
 
 /* 스타일가이드 양식 */
 main {padding: 20px;}
 hr {margin: 50px 0;}
-section > * {margin-bottom: 20px;}
-section > h2:first-child {margin-bottom: 20px;}
+section {
+    > * {margin-bottom: 20px;}
+    > h2:first-child, > * h2 {margin-bottom: 20px;}
+}
 ul.list_con {
     > li {
         display: flex;
@@ -13,5 +17,12 @@ ul.list_con {
         p.label {
             width: 100px;
         }
+    }
+}
+
+.flex-con{
+    display: flex;
+    > div {
+        flex: 1;
     }
 }

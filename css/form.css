@@ -10,7 +10,7 @@
 -------------------------------------------------------------------*/
 /* input */
 input {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #E8E8E8;
 }
 
 input[type=text],
@@ -20,16 +20,15 @@ input[type=date] {
   width: 250px;
   height: 40px;
   padding: 1px 15px;
-  border: 1px solid #e8e8e8;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   vertical-align: middle;
   outline: 0;
   font-size: 15px;
   font-weight: 500;
   line-height: 36px;
   letter-spacing: normal;
-  color: #101416;
+  color: #1D1D1D;
 }
 
 input[type=text]:-moz-read-only,
@@ -37,7 +36,7 @@ input[type=password]:-moz-read-only,
 input[type=number]:-moz-read-only,
 input[type=date]:-moz-read-only {
   color: #868686;
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 
 input[type=text]:read-only,
@@ -45,7 +44,7 @@ input[type=password]:read-only,
 input[type=number]:read-only,
 input[type=date]:read-only {
   color: #868686;
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 
 input[type=text]:focus:not([readonly]),
@@ -59,9 +58,9 @@ input[type=text].error,
 input[type=password].error,
 input[type=number].error,
 input[type=date].error {
-  color: #1d1d1d;
-  background-color: #fff5f6;
-  border-color: #dc3636;
+  color: #1D1D1D;
+  background-color: #FFF5F6;
+  border-color: #DC3636;
 }
 
 input[type=text].error + span.error-msg,
@@ -74,7 +73,7 @@ input[type=date].error + span.error-msg {
   font-weight: 500;
   line-height: normal;
   letter-spacing: normal;
-  color: #dc3636;
+  color: #DC3636;
 }
 
 /* textarea */
@@ -83,14 +82,14 @@ textarea {
   height: 155px;
   padding: 12px 15px;
   word-break: break-all;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #E8E8E8;
   border-radius: 5px;
   resize: none;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.73;
   letter-spacing: -0.38px;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 textarea:focus {
@@ -98,19 +97,19 @@ textarea:focus {
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #a8a8a8;
+  color: #A8A8A8;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #a8a8a8;
+  color: #A8A8A8;
 }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #a8a8a8;
+  color: #A8A8A8;
 }
 
 input::placeholder, textarea::placeholder {
-  color: #a8a8a8;
+  color: #A8A8A8;
 }
 
 /* select */
@@ -124,14 +123,14 @@ input::placeholder, textarea::placeholder {
   width: 100%;
   height: 40px;
   padding: 0px 15px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #E8E8E8;
   border-radius: 5px;
   vertical-align: middle;
   font-size: 15px;
   font-weight: normal;
   line-height: 2.4;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .select-con select option {
@@ -147,9 +146,9 @@ input::placeholder, textarea::placeholder {
 }
 
 .selectric-wrapper .selectric {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #E8E8E8;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .selectric-wrapper .selectric .label {
@@ -158,7 +157,7 @@ input::placeholder, textarea::placeholder {
   font-weight: normal;
   line-height: 2.4;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .selectric-wrapper .selectric .button {
@@ -168,15 +167,15 @@ input::placeholder, textarea::placeholder {
 
 .selectric-wrapper .selectric .button::after {
   border-top-width: 6.8px;
-  border-top-color: #1d1d1d;
+  border-top-color: #1D1D1D;
 }
 
 .selectric-wrapper .selectric-items {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #E8E8E8;
   border-radius: 5px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .selectric-wrapper .selectric-items li {
@@ -185,7 +184,7 @@ input::placeholder, textarea::placeholder {
   font-weight: normal;
   line-height: 2.87;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .selectric-wrapper .selectric-items li:hover, .selectric-wrapper .selectric-items li.highlighted {
@@ -208,7 +207,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .selectric-disabled .selectric {
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 
 .selectric-disabled .selectric .label {
@@ -240,19 +239,19 @@ input::placeholder, textarea::placeholder {
 }
 
 .radio-con input[type=radio]:checked + label::before {
-  border: 7px solid #4b70eb;
+  border: 7px solid #4A5DC6;
 }
 
 .radio-con input[type=radio]:disabled + label {
-  color: #a8a8a8;
+  color: #A8A8A8;
 }
 
 .radio-con input[type=radio]:disabled + label::before {
-  background-color: #dedede;
+  background-color: #DEDEDE;
 }
 
 .radio-con input[type=radio]:checked:disabled + label::before {
-  border: 1px solid #c3c3c3;
+  border: 1px solid #C3C3C3;
 }
 
 .radio-con input[type=radio]:checked:disabled + label::after {
@@ -273,7 +272,7 @@ input::placeholder, textarea::placeholder {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .radio-con label::before {
@@ -282,9 +281,9 @@ input::placeholder, textarea::placeholder {
   height: 21px;
   position: absolute;
   left: 0;
-  border: 1px solid #c3c3c3;
+  border: 1px solid #C3C3C3;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .radio-con.only-box label {
@@ -295,7 +294,7 @@ input::placeholder, textarea::placeholder {
 .radio-btn-con {
   display: inline-block;
   position: relative;
-  border: 1px solid #c3c3c3;
+  border: 1px solid #C3C3C3;
   border-radius: 5px;
   font-size: 0;
 }
@@ -306,21 +305,21 @@ input::placeholder, textarea::placeholder {
 }
 
 .radio-btn-con input:checked + label {
-  color: #ffffff;
-  background-color: #4b70eb;
-  border-right-color: #c3c3c3;
+  color: #FFFFFF;
+  background-color: #4A5DC6;
+  border-right-color: #C3C3C3;
 }
 
 .radio-btn-con label {
   display: inline-block;
   padding: 11px 21px 12px;
-  border-right: 1px solid #c3c3c3;
+  border-right: 1px solid #C3C3C3;
   cursor: pointer;
   font-size: 15px;
   font-weight: normal;
   line-height: 22px;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #5A5A5A;
 }
 
 .radio-btn-con label:last-child {
@@ -342,20 +341,20 @@ input::placeholder, textarea::placeholder {
 }
 
 .checkbox-con input[type=checkbox]:checked + label::before {
-  border-color: #4b70eb;
-  background: #4b70eb url("../../img/icn_form_checkbox.svg") no-repeat center center;
+  border-color: #4A5DC6;
+  background: #4A5DC6 url("../../img/icn_form_checkbox.svg") no-repeat center center;
 }
 
 .checkbox-con input[type=checkbox]:disabled + label {
-  color: #a8a8a8;
+  color: #A8A8A8;
 }
 
 .checkbox-con input[type=checkbox]:disabled + label::before {
-  background-color: #dedede;
+  background-color: #DEDEDE;
 }
 
 .checkbox-con input[type=checkbox]:checked:disabled + label::before {
-  border: 1px solid #c3c3c3;
+  border: 1px solid #C3C3C3;
   background-image: url("../../img/icn_form_checkbox_readonly.svg");
 }
 
@@ -369,7 +368,7 @@ input::placeholder, textarea::placeholder {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .checkbox-con label::before {
@@ -378,9 +377,9 @@ input::placeholder, textarea::placeholder {
   height: 21px;
   position: absolute;
   left: 0;
-  border: 1px solid #c3c3c3;
+  border: 1px solid #C3C3C3;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .checkbox-con.only-box label {
@@ -401,7 +400,7 @@ input::placeholder, textarea::placeholder {
   font-weight: normal;
   line-height: 18px;
   letter-spacing: normal;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .datepicker-con .ui-datepicker-trigger {
@@ -416,9 +415,9 @@ input::placeholder, textarea::placeholder {
   width: 334px;
   margin-top: 2px;
   padding: 19px 31px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #E8E8E8;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   font-family: "Roboto";
 }
 
@@ -427,7 +426,7 @@ input::placeholder, textarea::placeholder {
   font-weight: bold;
   line-height: 38px;
   letter-spacing: -0.8px;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .ui-datepicker .ui-datepicker-header {
@@ -482,11 +481,11 @@ input::placeholder, textarea::placeholder {
   font-weight: bold;
   line-height: 24px;
   letter-spacing: -0.4px;
-  color: #1d1d1d;
+  color: #1D1D1D;
 }
 
 .ui-datepicker th:first-child {
-  color: #dc3636;
+  color: #DC3636;
 }
 
 .ui-datepicker td {
@@ -495,7 +494,7 @@ input::placeholder, textarea::placeholder {
   font-weight: normal;
   line-height: 2.75;
   letter-spacing: -0.8px;
-  color: #5a5a5a;
+  color: #5A5A5A;
 }
 
 .ui-datepicker td.ui-state-disabled {
@@ -503,7 +502,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .ui-datepicker td:first-child {
-  color: #dc3636;
+  color: #DC3636;
 }
 
 .ui-datepicker td .ui-state-default {
@@ -519,8 +518,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .ui-datepicker td .ui-state-default.ui-state-active {
-  color: #ffffff;
-  background-color: #4b70eb;
+  color: #FFFFFF;
+  background-color: #4A5DC6;
   border-radius: 50%;
   font-weight: bold;
 }
