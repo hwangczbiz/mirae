@@ -1,0 +1,81 @@
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Font
+-------------------------------------------------------------------*/
+/* Heading */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -2.4px;
+  color: #000000; }
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.38;
+  letter-spacing: -2px;
+  color: #000000; }
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.6px;
+  color: #000000; }
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.2px;
+  color: #000000; }
+
+/* Body */
+.font18 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -0.36px;
+  color: #000000; }
+
+.font15 {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  color: #000000; }
+
+.font14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000; }
+
+/* Button */
+.btn-font19 {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.58;
+  letter-spacing: -0.38px;
+  color: #000000; }
+
+.btn-font16 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -0.32px;
+  color: #000000; }
+
+.btn-font14 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.57;
+  letter-spacing: -0.28px;
+  color: #000000; }
