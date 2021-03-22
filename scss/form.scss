@@ -45,11 +45,11 @@ input[type=date].error
     color: $color-1d;
     background-color: $color-error-input;
     border-color: $color-error;
-    + span.error-msg {
-        display: block;
-        margin-top: 5px;
-        @include fontStyler(14px, 500, normal, normal, $color-error);
-    }
+}
+span.error-msg {
+    display: block;
+    margin-top: 5px;
+    @include fontStyler(14px, 500, normal, normal, $color-error);
 }
 
 /* textarea */
@@ -215,8 +215,6 @@ input::placeholder, textarea::placeholder {
 .radio-btn-con {
     display: inline-block;
     position: relative;
-    border: 1px solid $color-c3;
-    border-radius: 5px;
     font-size: 0;
     input {
         position: absolute;
@@ -225,18 +223,26 @@ input::placeholder, textarea::placeholder {
             + label {
                 color: $color-ff;
                 background-color: $color-sub1;
-                border-right-color: $color-c3;
+                border-color: $color-sub1;
             }
         }
     }
     label {
         display: inline-block;
         padding: 11px 21px 12px;
-        border-right: 1px solid $color-c3;
+        border: 1px solid $color-c3;
+        border-right: none;
+        border-collapse: collapse;
         cursor: pointer;
         @include fontStyler(15px, normal, 22px, normal, $color-5a);
+        &:nth-child(2) {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
         &:last-child {
-            border: none;
+            border-right: 1px solid $color-c3;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
     }
 }

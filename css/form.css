@@ -6,6 +6,11 @@
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
     @Form
 -------------------------------------------------------------------*/
 /* input */
@@ -63,10 +68,7 @@ input[type=date].error {
   border-color: #DC3636;
 }
 
-input[type=text].error + span.error-msg,
-input[type=password].error + span.error-msg,
-input[type=number].error + span.error-msg,
-input[type=date].error + span.error-msg {
+span.error-msg {
   display: block;
   margin-top: 5px;
   font-size: 14px;
@@ -294,8 +296,6 @@ input::placeholder, textarea::placeholder {
 .radio-btn-con {
   display: inline-block;
   position: relative;
-  border: 1px solid #C3C3C3;
-  border-radius: 5px;
   font-size: 0;
 }
 
@@ -307,13 +307,15 @@ input::placeholder, textarea::placeholder {
 .radio-btn-con input:checked + label {
   color: #FFFFFF;
   background-color: #4A5DC6;
-  border-right-color: #C3C3C3;
+  border-color: #4A5DC6;
 }
 
 .radio-btn-con label {
   display: inline-block;
   padding: 11px 21px 12px;
-  border-right: 1px solid #C3C3C3;
+  border: 1px solid #C3C3C3;
+  border-right: none;
+  border-collapse: collapse;
   cursor: pointer;
   font-size: 15px;
   font-weight: normal;
@@ -322,8 +324,15 @@ input::placeholder, textarea::placeholder {
   color: #5A5A5A;
 }
 
+.radio-btn-con label:nth-child(2) {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
 .radio-btn-con label:last-child {
-  border: none;
+  border-right: 1px solid #C3C3C3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* checkbox */
@@ -342,7 +351,7 @@ input::placeholder, textarea::placeholder {
 
 .checkbox-con input[type=checkbox]:checked + label::before {
   border-color: #4A5DC6;
-  background: #4A5DC6 url("../../img/icn_form_checkbox.svg") no-repeat center center;
+  background: #4A5DC6 url("../img/icn_form_checkbox.svg") no-repeat center center;
 }
 
 .checkbox-con input[type=checkbox]:disabled + label {
@@ -355,7 +364,7 @@ input::placeholder, textarea::placeholder {
 
 .checkbox-con input[type=checkbox]:checked:disabled + label::before {
   border: 1px solid #C3C3C3;
-  background-image: url("../../img/icn_form_checkbox_readonly.svg");
+  background-image: url("../img/icn_form_checkbox_readonly.svg");
 }
 
 .checkbox-con label {
@@ -455,7 +464,7 @@ input::placeholder, textarea::placeholder {
   width: 40px;
   height: 40px;
   text-indent: -99999px;
-  background: url("../../img/btn_arrow_calendar_prev.svg") no-repeat center;
+  background: url("../img/btn_arrow_calendar_prev.svg") no-repeat center;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
@@ -467,7 +476,7 @@ input::placeholder, textarea::placeholder {
   width: 40px;
   height: 40px;
   text-indent: -99999px;
-  background: url("../../img/btn_arrow_calendar_next.svg") no-repeat center;
+  background: url("../img/btn_arrow_calendar_next.svg") no-repeat center;
 }
 
 .ui-datepicker th, .ui-datepicker td {
