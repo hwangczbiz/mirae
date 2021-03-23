@@ -143,19 +143,19 @@ input[type=button][class*=btn][class*=-grad].blue.hover:not([disabled]), input[t
 }
 
 input[type=button][class*=btn].icon-member {
-  background-image: url("../img/btn_micon_person.svg");
+  background-image: url("../../img/btn_micon_person.svg");
 }
 
 input[type=button][class*=btn].icon-add {
-  background-image: url("../img/btn_sicon_add.svg");
+  background-image: url("../../img/btn_sicon_add.svg");
 }
 
 input[type=button][class*=btn].icon-download {
-  background-image: url("../img/btn_sicon_download.svg");
+  background-image: url("../../img/btn_sicon_download.svg");
 }
 
 input[type=button][class*=btn].icon-prev {
-  background-image: url("../img/btn_licon_back.svg");
+  background-image: url("../../img/btn_licon_back.svg");
 }
 
 input[type=button][class*=btn][class*=icon-] {
@@ -201,10 +201,10 @@ a[class*=btn-text]:hover, a[class*=btn-text].hover {
 
 a[class*=btn-text].icon-lock {
   padding-left: 23px;
-  background: url("../img/btn_tmicon_findaid.svg") no-repeat left center;
+  background: url("../../img/btn_tmicon_findaid.svg") no-repeat left center;
 }
 
 a[class*=btn-text].icon-next {
   padding-right: 16px;
-  background: url("../img/btn_tsicon_arrow_right.svg") no-repeat right center;
+  background: url("../../img/btn_tsicon_arrow_right.svg") no-repeat right center;
 }

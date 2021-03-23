@@ -6,6 +6,11 @@
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
     @Font
 -------------------------------------------------------------------*/
 /* Font-family */
@@ -134,6 +139,11 @@ h1.ff-roboto, h2.ff-roboto, h3.ff-roboto, h4.ff-roboto {
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
     @Form
 -------------------------------------------------------------------*/
 /* input */
@@ -191,10 +201,7 @@ input[type=date].error {
   border-color: #DC3636;
 }
 
-input[type=text].error + span.error-msg,
-input[type=password].error + span.error-msg,
-input[type=number].error + span.error-msg,
-input[type=date].error + span.error-msg {
+span.error-msg {
   display: block;
   margin-top: 5px;
   font-size: 14px;
@@ -422,8 +429,6 @@ input::placeholder, textarea::placeholder {
 .radio-btn-con {
   display: inline-block;
   position: relative;
-  border: 1px solid #C3C3C3;
-  border-radius: 5px;
   font-size: 0;
 }
 
@@ -435,13 +440,15 @@ input::placeholder, textarea::placeholder {
 .radio-btn-con input:checked + label {
   color: #FFFFFF;
   background-color: #4A5DC6;
-  border-right-color: #C3C3C3;
+  border-color: #4A5DC6;
 }
 
 .radio-btn-con label {
   display: inline-block;
   padding: 11px 21px 12px;
-  border-right: 1px solid #C3C3C3;
+  border: 1px solid #C3C3C3;
+  border-right: none;
+  border-collapse: collapse;
   cursor: pointer;
   font-size: 15px;
   font-weight: normal;
@@ -450,8 +457,15 @@ input::placeholder, textarea::placeholder {
   color: #5A5A5A;
 }
 
+.radio-btn-con label:nth-child(2) {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
 .radio-btn-con label:last-child {
-  border: none;
+  border-right: 1px solid #C3C3C3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* checkbox */
@@ -470,7 +484,7 @@ input::placeholder, textarea::placeholder {
 
 .checkbox-con input[type=checkbox]:checked + label::before {
   border-color: #4A5DC6;
-  background: #4A5DC6 url("../img/icn_form_checkbox.svg") no-repeat center center;
+  background: #4A5DC6 url("../../img/icn_form_checkbox.svg") no-repeat center center;
 }
 
 .checkbox-con input[type=checkbox]:disabled + label {
@@ -483,7 +497,7 @@ input::placeholder, textarea::placeholder {
 
 .checkbox-con input[type=checkbox]:checked:disabled + label::before {
   border: 1px solid #C3C3C3;
-  background-image: url("../img/icn_form_checkbox_readonly.svg");
+  background-image: url("../../img/icn_form_checkbox_readonly.svg");
 }
 
 .checkbox-con label {
@@ -583,7 +597,7 @@ input::placeholder, textarea::placeholder {
   width: 40px;
   height: 40px;
   text-indent: -99999px;
-  background: url("../img/btn_arrow_calendar_prev.svg") no-repeat center;
+  background: url("../../img/btn_arrow_calendar_prev.svg") no-repeat center;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
@@ -595,7 +609,7 @@ input::placeholder, textarea::placeholder {
   width: 40px;
   height: 40px;
   text-indent: -99999px;
-  background: url("../img/btn_arrow_calendar_next.svg") no-repeat center;
+  background: url("../../img/btn_arrow_calendar_next.svg") no-repeat center;
 }
 
 .ui-datepicker th, .ui-datepicker td {
@@ -659,6 +673,11 @@ input::placeholder, textarea::placeholder {
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
     @Button 
     - Size: default: small(50x30) 별도 클래스 없음 / .large, .medium 으로 사이즈 조절
     - Style: default: line 별도 클래스 없음 / .solid, .icon- 으로 스타일링
@@ -680,8 +699,27 @@ input[type=button][class*=btn] {
 }
 
 input[type=button][class*=btn].hover:not([disabled]), input[type=button][class*=btn]:hover:not([disabled]), input[type=button][class*=btn]:active:not([disabled]) {
-  color: #414141;
+  color: #868686;
   border-color: #414141;
+}
+
+input[type=button][class*=btn].color-41 {
+  color: #414141;
+}
+
+input[type=button][class*=btn].color-41.hover:not([disabled]), input[type=button][class*=btn].color-41:hover:not([disabled]), input[type=button][class*=btn].color-41:active:not([disabled]) {
+  color: #414141;
+  border-color: #4D546C;
+}
+
+input[type=button][class*=btn].color-main {
+  color: #4B6CEB;
+  border-color: #4B6CEB;
+}
+
+input[type=button][class*=btn].color-main.hover:not([disabled]), input[type=button][class*=btn].color-main:hover:not([disabled]), input[type=button][class*=btn].color-main:active:not([disabled]) {
+  color: #4B6CEB;
+  border-color: #102989;
 }
 
 input[type=button][class*=btn]:disabled {
@@ -726,13 +764,20 @@ input[type=button][class*=btn][class*=-solid] {
   background-color: #4B6CEB;
 }
 
+input[type=button][class*=btn][class*=-solid].hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:active:not([disabled]) {
+  color: #FFFFFF;
+  border-color: none;
+  background-color: #314699;
+}
+
 input[type=button][class*=btn][class*=-solid].color-4d {
   background-color: #4D546C;
 }
 
-input[type=button][class*=btn][class*=-solid].hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:active:not([disabled]) {
+input[type=button][class*=btn][class*=-solid].color-4d.hover:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:hover:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:active:not([disabled]) {
   color: #FFFFFF;
-  background-color: #314699;
+  border-color: none;
+  background-color: #323746;
 }
 
 input[type=button][class*=btn][class*=-solid]:disabled {
@@ -748,6 +793,7 @@ input[type=button][class*=btn][class*=-grad] {
 
 input[type=button][class*=btn][class*=-grad].hover:not([disabled]), input[type=button][class*=btn][class*=-grad]:hover:not([disabled]), input[type=button][class*=btn][class*=-grad]:active:not([disabled]) {
   color: #FFFFFF;
+  border-color: none;
   border: none;
   background: linear-gradient(346deg, #a64f28 63%, #a67d48);
 }
@@ -756,20 +802,27 @@ input[type=button][class*=btn][class*=-grad].blue {
   background: linear-gradient(346deg, #5B5ECF 63%, #3877DA);
 }
 
-input[type=button][class*=btn].icon-member {
-  background-image: url("../img/btn_micon_person.svg");
+input[type=button][class*=btn][class*=-grad].blue.hover:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:hover:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:active:not([disabled]) {
+  color: #FFFFFF;
+  border-color: none;
+  border: none;
+  background: linear-gradient(346deg, #3b3d87 63%, #244d8e);
 }
 
-input[type=button][class*=btn].icon-plus {
-  background-image: url("../img/btn_sicon_add.svg");
+input[type=button][class*=btn].icon-member {
+  background-image: url("../../img/btn_micon_person.svg");
+}
+
+input[type=button][class*=btn].icon-add {
+  background-image: url("../../img/btn_sicon_add.svg");
 }
 
 input[type=button][class*=btn].icon-download {
-  background-image: url("../img/btn_sicon_download.svg");
+  background-image: url("../../img/btn_sicon_download.svg");
 }
 
 input[type=button][class*=btn].icon-prev {
-  background-image: url("../img/btn_licon_back.svg");
+  background-image: url("../../img/btn_licon_back.svg");
 }
 
 input[type=button][class*=btn][class*=icon-] {
@@ -815,12 +868,12 @@ a[class*=btn-text]:hover, a[class*=btn-text].hover {
 
 a[class*=btn-text].icon-lock {
   padding-left: 23px;
-  background: url("../img/btn_tmicon_findaid.svg") no-repeat left center;
+  background: url("../../img/btn_tmicon_findaid.svg") no-repeat left center;
 }
 
 a[class*=btn-text].icon-next {
   padding-right: 16px;
-  background: url("../img/btn_tsicon_arrow_right.svg") no-repeat right center;
+  background: url("../../img/btn_tsicon_arrow_right.svg") no-repeat right center;
 }
 
 /*-------------------------------------------------------------------
@@ -828,6 +881,11 @@ a[class*=btn-text].icon-next {
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
     @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
     @Table

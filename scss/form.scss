@@ -51,6 +51,21 @@ span.error-msg {
     margin-top: 5px;
     @include fontStyler(14px, 500, normal, normal, $color-error);
 }
+/* clear button */
+span.clear-btn-con {
+    display: inline-block;
+    position: relative;
+}
+span.clear-btn {
+    position: absolute;
+    display: none;
+    top: 11px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/btn_form_clear.svg');
+    cursor: pointer;
+}
 
 /* textarea */
 textarea {
@@ -262,7 +277,7 @@ input::placeholder, textarea::placeholder {
             + label {
                 &::before {
                     border-color: $color-sub1;
-                    background: $color-sub1 url("../../img/icn_form_checkbox.svg") no-repeat center center;
+                    background: $color-sub1 url("../img/icn_form_checkbox.svg") no-repeat center center;
                 }
             }
         }
@@ -278,7 +293,7 @@ input::placeholder, textarea::placeholder {
             + label {
                 &::before {
                     border: 1px solid $color-c3;
-                    background-image: url("../../img/icn_form_checkbox_readonly.svg");
+                    background-image: url("../img/icn_form_checkbox_readonly.svg");
                 }
             }
         }
@@ -355,7 +370,7 @@ input::placeholder, textarea::placeholder {
                 width: 40px;
                 height: 40px;
                 text-indent: -99999px;
-                background: url("../../img/btn_arrow_calendar_prev.svg") no-repeat center;
+                background: url("../img/btn_arrow_calendar_prev.svg") no-repeat center;
             }
         }
         .ui-datepicker-next {
@@ -365,7 +380,7 @@ input::placeholder, textarea::placeholder {
                 width: 40px;
                 height: 40px;
                 text-indent: -99999px;
-                background: url("../../img/btn_arrow_calendar_next.svg") no-repeat center;
+                background: url("../img/btn_arrow_calendar_next.svg") no-repeat center;
             }
         }
     }

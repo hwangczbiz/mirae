@@ -78,6 +78,23 @@ span.error-msg {
   color: #DC3636;
 }
 
+/* clear button */
+span.clear-btn-con {
+  display: inline-block;
+  position: relative;
+}
+
+span.clear-btn {
+  position: absolute;
+  display: none;
+  top: 11px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/btn_form_clear.svg");
+  cursor: pointer;
+}
+
 /* textarea */
 textarea {
   width: 400px;
