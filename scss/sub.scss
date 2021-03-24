@@ -34,77 +34,75 @@
     padding: 42px 40px;
 }
 .content-sec {
-    width: 943px;
-    margin-bottom: 60px;
-}
-.sec-head {
-    margin-bottom: 15px;
-    &.has-btn {
+    width: 944px;
+    margin-top: 60px;
+    &:first-child {
+        margin-top: 0;
+    }
+    .sec-head {
         display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        .left-con, .right-con {
+        align-items: flex-end;
+        &.middle {
+            align-items: center;
+        }
+        &.between {
+            justify-content: space-between;
+        }
+        .title-con, .btn-con {
             font-size: 0;
+        }
+        .btn-con {
+            margin-left: 20px;
             > * {
-                display: inline-block;
-                vertical-align: bottom;
-            }
-        }
-        .left-con {
-            .total-cnt {
-                color: $color-86;
-                font-weight: 500;
+                margin-left: 8px;
+                &:first-child {
+                    margin-left: 0;
+                }
             }
         }
     }
-}
-.sec-body{
-    
-}
-.form-con {
-    padding-top: 25px;
-    border-top: 2px solid $color-1d;
-    > li {
-        display: flex;
-        align-items: baseline;
-        font-size: 0;
-        margin-bottom: 25px;
-        > div {
-            display: inline-block;
-            vertical-align: top;
-        }
-        .form-title {
-            width: 170px;
-            label {
-                display: inline-block;
-                vertical-align: middle;
-                color: $color-5a;
+    .sec-body{
+        /* 제목 + 입력필드 유형 */
+        .form-con {
+            margin-top: 15px;
+            padding-top: 25px;
+            border-top: 2px solid $color-1d;
+            > li {
+                display: flex;
+                align-items: baseline;
+                font-size: 0;
+                margin-bottom: 25px;
+                .form-title {
+                    min-width: 160px;
+                    .title {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 8px;
+                        @include fontStyler(14px, normal, normal, normal, $color-5a);
+                    }
+                    .required {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 10px;
+                        @include fontStyler(12px, 500, normal, normal, $color-error);
+                    }
+                }
+                .form-cont {
+
+                }
             }
-            span {
-                display: inline-block;
-                vertical-align: middle;
-                color: $color-error;
-            }
         }
+    }
+    .added-con {
+        margin-top: 45px;
     }
 }
 
 
 
-.w340 {width: 340px !important;}
-.w408 {width: 408px !important;}
+.w336 {width: 336px !important;}
+.w440 {width: 440px !important;}
 
-.mt20 {margin-top: 20px !important;}
+.mt8 {margin-top: 8px !important;}
 
-.mb5 {margin-bottom: 5px !important;}
-.mb10 {margin-bottom: 10px !important;}
-.mb40 {margin-bottom: 40px !important;}
-
-.mr7 {margin-right: 7px !important;}
-.mr8 {margin-right: 8px !important;}
-.mr9 {margin-right: 9px !important;}
-.mr10 {margin-right: 10px !important;}
-.mr17 {margin-right: 17px !important;}
-.mr20 {margin-right: 20px !important;}
-
-
+.ml8 {margin-left: 8px !important;}

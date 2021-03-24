@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- libs - Datepicker, selectbox -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../../js/libs/jquery.selectric.js"></script>
+    <link rel="stylesheet" href="../../css/selectric.css">
+    <!-- // libs - Datepicker, selectbox -->
+
+    <script src="../../js/sub.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/sub.css">
+    <title>신청 - 임시</title>
+</head>
+
+<body>
+    <main>
+        <div class="sub-wrap">
+
+            <!-- 등기 기본정보 -->
+            <section class="content-sec">
+                <div class="sec-head">
+                    <div class="title-con">
+                        <h4>등기 기본정보</h4>
+                    </div>
+                </div>
+                <div class="sec-body">
+                    <ul class="form-con">
+                        <li>
+                            <div class="form-title">
+                                <label for="type00" class="title">등기유형</label>
+                                <span class="required">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <input type="text" name="" id="type00" class="w336" value="소유권 이전" readonly>
+                                <span class="checkbox-con mt8">
+                                    <input type="checkbox" name="" id="type01">
+                                    <label for="type01">
+                                        ‘매매’ 또는 ‘신탁재산의 귀속’ 등기원인을 선택하여 신탁등기를 말소합니다.
+                                    </label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="type02" class="title">등기원인</label>
+                                <span class="required">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <span class="select-con w336">
+                                    <select name="" id="type02" class="custom-select">
+                                        <option value="매매1">매매1</option>
+                                        <option value="매매2">매매2</option>
+                                        <option value="매매3">매매3</option>
+                                    </select>
+                                </span>
+                                <input type="text" name="" id="" class="w440 ml8" placeholder="상세등기원인이 있을 시 내용을 입력해 주세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="type03" class="title">등기일자</label>
+                                <span class="required">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <span class="datepicker-con w336">
+                                    <input type="text" name="" id="type03" class="datepicker">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="type04" class="title">잔금납부일</label>
+                                <span class="required">필수</span>
+                            </div>
+                            <div class="form-cont">
+                                <span class="datepicker-con w336">
+                                    <input type="text" name="" id="type04" class="datepicker">
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 거래가액 -->
+            <section class="content-sec">
+                <div class="sec-head between">
+                    <div class="title-con">
+                        <h4>거래가액</h4>
+                    </div>
+                    <div class="btn-con">
+                        <input type="button" class="btn color-86" value="선택 삭제">
+                    </div>
+                </div>
+                <div class="sec-body">
+                    <div class="table-head"></div>
+                    <div class="table-body">
+                        <table class="table-list" summary="거래가액 리스트입니다.">
+                            <caption>거래가액</caption>
+                            <colgroup>
+                                <col style="width: 51px;">
+                                <col style="width: auto;">
+                                <col style="width: 160px;">
+                                <col style="width: 170px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="has-checkbox">
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="cbox01"><label for="cbox01"></label>
+                                        </span>
+                                    </th>
+                                    <th scope="col">부동산표시</th>
+                                    <th scope="col">거래신고 관리번호</th>
+                                    <th scope="col">거래가액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="has-checkbox">
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="cbox02"><label for="cbox02"></label>
+                                        </span>
+                                    </td>
+                                    <td>서울특별시 중구 다동길 96(다동)</td>
+                                    <td>1501-2017-000647</td>
+                                    <td class="ff-roboto">금 99,000,000,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 등기의무자 - 버튼만 -->
+            <section class="content-sec">
+                <div class="sec-head">
+                    <div class="title-con">
+                        <h4>등기의무자</h4>
+                    </div>
+                    <div class="btn-con">
+                        <input type="button" class="btn icon-add color-main" value="등기의무자 입력">
+                    </div>
+                </div>
+                <div class="sec-body"></div>
+            </section>
+
+            <!-- 등기의무자 - 내용 포함 -->
+            <section class="content-sec">
+                <div class="sec-head">
+                    <div class="title-con">
+                        <h4>등기의무자</h4>
+                    </div>
+                    <div class="btn-con">
+                        <input type="button" class="btn icon-add color-main" value="추가">
+                    </div>
+                </div>
+                <div class="sec-body">
+                    <div class="table-head">
+                        <div class="left-con">
+                            <span class="total-cnt">총 <span>3</span>건</span>
+                        </div>
+                        <div class="right-con">
+                            <input type="button" class="btn-line" value="선택 삭제">
+                            <input type="button" class="btn-line icon-download" value="엑셀 다운로드">
+                            <input type="button" class="btn-line" value="대위자 등록">
+                        </div>
+                    </div>
+                    <div class="table-body">
+                        <table class="table-list" summary="등기의무자 리스트입니다.">
+                            <caption>등기의무자</caption>
+                            <colgroup>
+                                <col style="width: 41px;">
+                                <col style="width: 200px;">
+                                <col style="width: auto;">
+                                <col style="width: 70px;">
+                                <col style="width: 70px;">
+                                <col style="width: 70px;">
+                                <col style="width: 90px;">
+                                <col style="width: 120px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="has-checkbox">
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="emdrl00"><label for="emdrl00"></label>
+                                        </span>
+                                    </th>
+                                    <th scope="col">성명 (등록번호)</th>
+                                    <th scope="col">주소</th>
+                                    <th scope="col">소유형태</th>
+                                    <th scope="col">현재지분</th>
+                                    <th scope="col">이전지분</th>
+                                    <th scope="col">대표자/기관</th>
+                                    <th scope="col">등기필 정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="has-checkbox">
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="emdrl01"><label for="emdrl01"></label>
+                                        </span>
+                                    </td>
+                                    <td>김등기 (719191-1234567)</td>
+                                    <td>서울특별시 영등포구 여의나루로 57</td>
+                                    <td>소유</td>
+                                    <td class="ff-roboto">1/2</td>
+                                    <td class="ff-roboto">1/2</td>
+                                    <td>공지철</td>
+                                    <td>
+                                        <span class="color-main">검증완료</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="has-checkbox">
+                                        <span class="checkbox-con only-box">
+                                            <input type="checkbox" name="" id="emdrl02"><label for="emdrl02"></label>
+                                        </span>
+                                    </td>
+                                    <td>김등기 (719191-1234567)</td>
+                                    <td>서울특별시 영등포구 여의나루로 57</td>
+                                    <td>소유</td>
+                                    <td class="ff-roboto">1/2</td>
+                                    <td class="ff-roboto">1/2</td>
+                                    <td>공지철</td>
+                                    <td class="has-btn">
+                                        <input type="button" name="" id="" class="btn-solid small" value="검증">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 기타 사항 -->
+            <section class="content-sec">
+                <div class="sec-head middle">
+                    <div class="title-con">
+                        <h4>기타 사항</h4>
+                    </div>
+                    <div class="btn-con">
+                        <span class="checkbox-btn-con">
+                            <input type="checkbox" name="" id="checkbox-btn-00" checked>
+                            <label for="checkbox-btn-00">신청인/대리인(작성자)</label>
+                        </span>
+                        <span class="checkbox-btn-con">
+                            <input type="checkbox" name="" id="checkbox-btn-01" checked>
+                            <label for="checkbox-btn-01">신탁사항</label>
+                        </span>
+                        <span class="checkbox-btn-con">
+                            <input type="checkbox" name="" id="checkbox-btn-02">
+                            <label for="checkbox-btn-02">환매특약</label>
+                        </span>
+                        <span class="checkbox-btn-con">
+                            <input type="checkbox" name="" id="checkbox-btn-03">
+                            <label for="checkbox-btn-03">약정/금지사항</label>
+                        </span>
+                        <span class="checkbox-btn-con">
+                            <input type="checkbox" name="" id="checkbox-btn-04">
+                            <label for="checkbox-btn-04">지분특정표시</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="sec-body">
+
+                    <!-- 선택에 따라 추가된 양식1 -->
+                    <div class="added-con">
+                        <div class="sec-head">
+                            <div class="title-con">
+                                <h4>신청인/대리인(작성자)</h4>
+                            </div>
+                        </div>
+                        <div class="sec-body">
+                            <ul class="form-con">
+                                <li>
+                                    <div class="form-title">
+                                        <label for="tlscjddls00" class="title">등기유형</label>
+                                        <span class="required">필수</span>
+                                    </div>
+                                    <div class="form-cont">
+                                        <input type="text" name="" id="tlscjddls00" class="w336" value="소유권 이전" readonly>
+                                        <span class="checkbox-con mt8">
+                                            <input type="checkbox" name="" id="tlscjddls01">
+                                            <label for="tlscjddls01">
+                                                ‘매매’ 또는 ‘신탁재산의 귀속’ 등기원인을 선택하여 신탁등기를 말소합니다.
+                                            </label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-title">
+                                        <label for="tlscjddls02" class="title">등기원인</label>
+                                        <span class="required">필수</span>
+                                    </div>
+                                    <div class="form-cont">
+                                        <span class="select-con w336">
+                                            <select name="" id="tlscjddls02" class="custom-select">
+                                                <option value="매매1">매매1</option>
+                                                <option value="매매2">매매2</option>
+                                                <option value="매매3">매매3</option>
+                                            </select>
+                                        </span>
+                                        <input type="text" name="" id="" class="w440 ml8" placeholder="상세등기원인이 있을 시 내용을 입력해 주세요.">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-title">
+                                        <label for="tlscjddls03" class="title">등기일자</label>
+                                        <span class="required">필수</span>
+                                    </div>
+                                    <div class="form-cont">
+                                        <span class="datepicker-con w336">
+                                            <input type="text" name="" id="tlscjddls03" class="datepicker">
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-title">
+                                        <label for="tlscjddls04" class="title">잔금납부일</label>
+                                        <span class="required">필수</span>
+                                    </div>
+                                    <div class="form-cont">
+                                        <span class="datepicker-con w336">
+                                            <input type="text" name="" id="tlscjddls04" class="datepicker">
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 선택에 따라 추가된 양식2 -->
+                    <div class="added-con">
+                        <div class="sec-head between">
+                            <div class="title-con">
+                                <h4>신탁사항</h4>
+                            </div>
+                            <div class="btn-con">
+                                <input type="button" class="btn color-86" value="선택 삭제">
+                            </div>
+                        </div>
+                        <div class="sec-body">
+                            <div class="table-head"></div>
+                            <div class="table-body">
+                                <table class="table-list" summary="신탁사항 리스트입니다.">
+                                    <caption>신탁사항</caption>
+                                    <colgroup>
+                                        <col style="width: 51px;">
+                                        <col style="width: auto;">
+                                        <col style="width: 160px;">
+                                        <col style="width: 170px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="has-checkbox">
+                                                <span class="checkbox-con only-box">
+                                                    <input type="checkbox" name="" id="tlsxkr00"><label for="tlsxkr00"></label>
+                                                </span>
+                                            </th>
+                                            <th scope="col">부동산표시</th>
+                                            <th scope="col">거래신고 관리번호</th>
+                                            <th scope="col">거래가액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="has-checkbox">
+                                                <span class="checkbox-con only-box">
+                                                    <input type="checkbox" name="" id="tlsxkr01"><label for="cbox02"></label>
+                                                </span>
+                                            </td>
+                                            <td>서울특별시 중구 다동길 96(다동)</td>
+                                            <td>1501-2017-000647</td>
+                                            <td class="ff-roboto">금 99,000,000,000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
+            </section>
+            
+        </div>
+    </main>
+</body>
+
+</html>

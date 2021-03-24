@@ -6,12 +6,37 @@
 /*-------------------------------------------------------------------
     @Table
 -------------------------------------------------------------------*/
-/* List */
-.table-con {
-    width: 100%;
+/* table layout */
+.table-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    align-items: flex-end;
+    .left-con {
+        font-size: 0;
+        .total-cnt {
+            margin-left: 8px;
+            @include fontStyler(14px, 500, normal, normal, $color-86);
+        }
+    }
+    .right-con {
+        font-size: 0;
+        > * {
+            margin-left: 8px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
 }
+.table-body {
+    width: 100%;
+    margin-top: 15px;
+}
+/* List */
 table.table-list {
     width: 100%;
+    border-top: 2px solid $color-1d;
     th, td {
         text-align: center;
         border-left: 1px solid $color-ed;
@@ -19,20 +44,32 @@ table.table-list {
         &:first-child {
             border-left: none;
         }
+        &.has-btn {
+            padding: 9px 10px 10px;
+        }
+        &.ff-roboto {
+            line-height: 18px;
+        }
     }
     thead th {
-        padding: 12px 10px 11px;
-        border-top: 2px solid $color-1d;
+        padding: 12px 10px 10px;
         border-bottom: none;
         background-color: $color-f7;
         color: $color-5a;
         @include fontStyler(14px, normal, 17px, -0.56px, $color-5a);
+        &.has-checkbox {
+            padding: 9px 10px;
+        }
     }
     td {
-        padding: 12px 10px 16px;
+        padding: 12px 10px 15px;
         @include fontStyler(15px, normal, 22px, normal, $color-41);
-        &.has-btn {
-            padding: 9px 10px 11px;
+        &.has-checkbox {
+            padding: 13px 10px;
+        }
+        &.left {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }
