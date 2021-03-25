@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import 'color.scss';
+@import 'mixin.scss';
+
+/*-------------------------------------------------------------------
+    @Popup
+-------------------------------------------------------------------*/
+@keyframes show-popup {
+    from {
+        margin-top: 100px;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+/* default popup */
+.popup-wrap {
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        .content-wrap {
+            animation: show-popup .2s  ease-in;
+        }
+    }
+    .content-wrap {
+        width: 100%;
+        min-width: 400px;
+        max-width: 1024px;
+        max-height: 753px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        background-color: $color-ff;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+        .head-sec{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 24px 23.5px 40px;
+            border-bottom: 1px solid #ddd;
+            .close-btn img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .body-sec{
+            padding: 39.5px 40px 0;
+            .popup-cont {
+                max-width: 944px;
+                max-height: 520px;
+                overflow-y: auto;
+            }
+        }
+        .foot-sec{
+            display: flex;
+            justify-content: space-between;
+            padding: 24px 40px 40px;
+            .right-con > * {
+                margin-left: 8px;
+                &:first-child {
+                    margin-left: 0;
+                } 
+            }
+        }
+        /* message popup - (confirm, alert, text, message) */
+        &.small {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            min-height: 227px;
+            .head-sec {
+                height: 56px;
+                padding: 16px 16px 8px 32px;
+                border: none;
+                .close-btn { 
+                    flex: 1;
+                    text-align: right;
+                }
+                .popup-title + .close-btn {
+                    flex: 0;
+                }
+            }
+            .body-sec {
+                flex: 1;
+                padding: 0 32px 24px;
+                text-align: center;
+                margin-top: 56px;
+                > * {
+                    display: inline-block;
+                }
+                &[class*=-center] {
+                    display: flex;
+                    align-items: center;
+                }
+                &.text-center {
+                    position: relative;
+                    z-index: -1;
+                    margin-top: -28px !important;
+                }
+                &.message-center {
+                    margin-top: 19px !important;
+                }
+            }
+            .head-sec + .body-sec {margin-top: 0;}
+            .foot-sec {
+                padding: 0 0 24px;
+                justify-content: center;
+                .center-con {
+                    > * {
+                        margin-left: 8px;
+                        &:first-child {
+                            margin-left: 0;
+                        } 
+                    }
+                }
+            }
+        }
+        [class*=icon-] {
+            padding-left: 36px;
+            text-align: left;
+        }
+        .icon-confirm {background: url("../img/ico_alert_check.svg") no-repeat left top / 32px 32px;}
+        .icon-alert {background: url("../img/ico_alert_warning.svg") no-repeat left top / 32px 32px; padding-left: 40px;}
+        .icon-noti {background: url("../img/ico_alert_noti.svg") no-repeat left top / 32px 32px;}
+    }
+    .dim-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}

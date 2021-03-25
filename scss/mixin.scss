@@ -20,6 +20,7 @@
 @mixin hoverStyler($color, $bdcolor, $bgcolor: #ffffff, $grad1: #FF793E, $grad2: #FFC16E){
     &.hover:not([disabled]),
     &:hover:not([disabled]), 
+    &:focus:not([disabled]), 
     &:active:not([disabled]) {
         color: $color;
         border-color: $bdcolor;

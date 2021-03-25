@@ -31,7 +31,7 @@ input[type=button][class*=btn] {
   color: #868686;
 }
 
-input[type=button][class*=btn].hover:not([disabled]), input[type=button][class*=btn]:hover:not([disabled]), input[type=button][class*=btn]:active:not([disabled]) {
+input[type=button][class*=btn].hover:not([disabled]), input[type=button][class*=btn]:hover:not([disabled]), input[type=button][class*=btn]:focus:not([disabled]), input[type=button][class*=btn]:active:not([disabled]) {
   color: #868686;
   border-color: #414141;
 }
@@ -40,7 +40,7 @@ input[type=button][class*=btn].color-41 {
   color: #414141;
 }
 
-input[type=button][class*=btn].color-41.hover:not([disabled]), input[type=button][class*=btn].color-41:hover:not([disabled]), input[type=button][class*=btn].color-41:active:not([disabled]) {
+input[type=button][class*=btn].color-41.hover:not([disabled]), input[type=button][class*=btn].color-41:hover:not([disabled]), input[type=button][class*=btn].color-41:focus:not([disabled]), input[type=button][class*=btn].color-41:active:not([disabled]) {
   color: #414141;
   border-color: #4D546C;
 }
@@ -50,7 +50,7 @@ input[type=button][class*=btn].color-main {
   border-color: #4B6CEB;
 }
 
-input[type=button][class*=btn].color-main.hover:not([disabled]), input[type=button][class*=btn].color-main:hover:not([disabled]), input[type=button][class*=btn].color-main:active:not([disabled]) {
+input[type=button][class*=btn].color-main.hover:not([disabled]), input[type=button][class*=btn].color-main:hover:not([disabled]), input[type=button][class*=btn].color-main:focus:not([disabled]), input[type=button][class*=btn].color-main:active:not([disabled]) {
   color: #4B6CEB;
   border-color: #102989;
 }
@@ -97,7 +97,7 @@ input[type=button][class*=btn][class*=-solid] {
   background-color: #4B6CEB;
 }
 
-input[type=button][class*=btn][class*=-solid].hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:active:not([disabled]) {
+input[type=button][class*=btn][class*=-solid].hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:hover:not([disabled]), input[type=button][class*=btn][class*=-solid]:focus:not([disabled]), input[type=button][class*=btn][class*=-solid]:active:not([disabled]) {
   color: #FFFFFF;
   border-color: none;
   background-color: #314699;
@@ -107,7 +107,7 @@ input[type=button][class*=btn][class*=-solid].color-4d {
   background-color: #4D546C;
 }
 
-input[type=button][class*=btn][class*=-solid].color-4d.hover:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:hover:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:active:not([disabled]) {
+input[type=button][class*=btn][class*=-solid].color-4d.hover:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:hover:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:focus:not([disabled]), input[type=button][class*=btn][class*=-solid].color-4d:active:not([disabled]) {
   color: #FFFFFF;
   border-color: none;
   background-color: #323746;
@@ -124,7 +124,7 @@ input[type=button][class*=btn][class*=-grad] {
   background: linear-gradient(346deg, #FF793E 63%, #FFC16E);
 }
 
-input[type=button][class*=btn][class*=-grad].hover:not([disabled]), input[type=button][class*=btn][class*=-grad]:hover:not([disabled]), input[type=button][class*=btn][class*=-grad]:active:not([disabled]) {
+input[type=button][class*=btn][class*=-grad].hover:not([disabled]), input[type=button][class*=btn][class*=-grad]:hover:not([disabled]), input[type=button][class*=btn][class*=-grad]:focus:not([disabled]), input[type=button][class*=btn][class*=-grad]:active:not([disabled]) {
   color: #FFFFFF;
   border-color: none;
   border: none;
@@ -135,7 +135,7 @@ input[type=button][class*=btn][class*=-grad].blue {
   background: linear-gradient(346deg, #5B5ECF 63%, #3877DA);
 }
 
-input[type=button][class*=btn][class*=-grad].blue.hover:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:hover:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:active:not([disabled]) {
+input[type=button][class*=btn][class*=-grad].blue.hover:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:hover:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:focus:not([disabled]), input[type=button][class*=btn][class*=-grad].blue:active:not([disabled]) {
   color: #FFFFFF;
   border-color: none;
   border: none;
