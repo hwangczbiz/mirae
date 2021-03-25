@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Table
+-------------------------------------------------------------------*/
+/* table layout */
+.table-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .table-head .left-con {
+    font-size: 0; }
+    .table-head .left-con .total-cnt {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #868686; }
+  .table-head .right-con {
+    font-size: 0; }
+    .table-head .right-con > * {
+      margin-left: 8px; }
+      .table-head .right-con > *:first-child {
+        margin-left: 0; }
+
+.table-body {
+  width: 100%;
+  margin-top: 15px; }
+
+/* List */
+table.table-list {
+  width: 100%;
+  border-top: 2px solid #1D1D1D; }
+  table.table-list th, table.table-list td {
+    text-align: center;
+    border-left: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED; }
+    table.table-list th:first-child, table.table-list td:first-child {
+      border-left: none; }
+    table.table-list th.has-btn, table.table-list td.has-btn {
+      padding: 9px 10px 10px; }
+    table.table-list th.ff-roboto, table.table-list td.ff-roboto {
+      line-height: 18px; }
+  table.table-list thead th {
+    padding: 12px 10px 10px;
+    border-bottom: none;
+    background-color: #F7F7F7;
+    color: #5A5A5A;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    letter-spacing: -0.56px;
+    color: #5A5A5A; }
+    table.table-list thead th.has-checkbox {
+      padding: 9px 10px; }
+  table.table-list td {
+    padding: 12px 10px 15px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: #414141; }
+    table.table-list td.has-checkbox {
+      padding: 13px 10px; }
+    table.table-list td.left {
+      padding-left: 15px;
+      padding-right: 15px; }
