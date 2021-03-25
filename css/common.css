@@ -126,6 +126,37 @@ header nav .sub-menu .menu-wrap dl dd a {
   background: #4a5dc6;
 }
 /* line 20, ../scss/common.scss */
+#contents .prog .stat {
+  width: 1215px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+}
+/* line 27, ../scss/common.scss */
+#contents .prog .stat .info {
+  display: flex;
+}
+/* line 29, ../scss/common.scss */
+#contents .prog .stat .info p {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  margin-right: 65px;
+}
+/* line 34, ../scss/common.scss */
+#contents .prog .stat .info p span {
+  margin-left: 15px;
+}
+/* line 39, ../scss/common.scss */
+#contents .prog .stat .btn {
+  width: 112px;
+  height: 40px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 46, ../scss/common.scss */
 #contents .prog .bar {
   width: 0;
   height: 55px;
@@ -136,12 +167,32 @@ header nav .sub-menu .menu-wrap dl dd a {
   opacity: .3;
   z-index: -1;
 }
-/* line 31, ../scss/common.scss */
+/* line 56, ../scss/common.scss */
+#contents .prog .error {
+  position: absolute;
+  left: 0;
+  top: 55px;
+  background: rgba(255, 88, 88, 0.9);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+/* line 69, ../scss/common.scss */
+#contents .prog .error span {
+  margin-right: 40px;
+  text-decoration: underline;
+}
+/* line 75, ../scss/common.scss */
 #contents .con-wrap {
   display: flex;
   justify-content: center;
 }
-/* line 34, ../scss/common.scss */
+/* line 78, ../scss/common.scss */
 #contents .con-wrap .lnb {
   width: 232px;
   border-right: 1px solid #e8e8e8;
@@ -149,7 +200,7 @@ header nav .sub-menu .menu-wrap dl dd a {
   padding-left: 7px;
   background: rgba(0, 0, 0, 0.1);
 }
-/* line 41, ../scss/common.scss */
+/* line 85, ../scss/common.scss */
 #contents .con-wrap .con {
   width: 943px;
   margin-left: 41px;
