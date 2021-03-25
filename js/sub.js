@@ -31,6 +31,26 @@ $(function(){
 
     // input clear button 생성
     inputClearHandler.init();
+    
+    
+    /* 스크롤 이벤트 */
+    
+    $(window).scroll(function(){
+        var initheight = 96;
+        var st = $(window).scrollTop();
+        var ht = $(window).height();
+        var bh = $("#contents").height() + initheight;
+        //var poz = 30;
+        var scrollable = bh - ht;
+        var prog = (st / scrollable) * 100;
+        
+        
+        
+        console.log(scrollable);
+        
+        if(prog >= 100) prog = 100;
+        $(".prog .bar").css({width:prog+"%"});
+    });
 })
 
 // input clear button

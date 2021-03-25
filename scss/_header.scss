@@ -1,0 +1,103 @@
+/*  GNB  */
+
+header{
+    position: sticky;
+    
+    top: 0;
+    left: 0;
+    height: 96px;
+    background: #fff;
+    z-index: 10;
+    .wrap{
+        width: calc(100% - 160px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    h1{
+        a{
+            display: block;
+            width: 174px;
+            height: 52px;
+            background: url("../img/img-logo.png") no-repeat center;
+            text-indent: -9999px;
+        }
+    }
+    nav{
+        >div:hover{
+            .one-dep a{
+                color: #4d73f4;
+                &:after{
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 12px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    background: #e0edf5;
+                    z-index: -1;
+
+                }
+            }
+            .sub-menu{
+                display: flex;
+            }
+        }
+        display: flex;
+        justify-content: center;
+        .one-dep{
+            height: 96px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            a{
+                font-size: 18px;
+                font-weight: bold;
+                color:#101426;
+                display: inline-block;
+                position: relative;
+            }
+        } 
+        .sub-menu{
+            position: absolute;
+            left: -80px;
+            top: 96px;
+            width: calc(100% + 160px);
+            background: #2e374f;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            box-shadow: 0 15px 60px 0 rgba(100, 115, 131, 0.2);
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            display: none;
+            .menu-wrap{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 1313px;
+                dl{
+                    width: calc(100% / 5);
+                    margin-bottom: 50px;
+                    dt{
+                        font-size: 18px;
+                        letter-spacing: -0.36px;
+                        color: #fff;
+                        font-weight: 500;
+                        margin-bottom: 30px;
+                    }
+                    dd a{
+                        color: #dedede;
+                        font-size: 16px;
+                        display: inline-block;
+                        padding-right: 15px;
+                        font-weight: 300;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
