@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+    @Color
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - fontStyler(f-size, f-weight, l-height, l-spacing, color: default=$color-00)
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
+    - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @Popup
+-------------------------------------------------------------------*/
+@-webkit-keyframes show-popup {
+  from {
+    margin-top: 100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes show-popup {
+  from {
+    margin-top: 100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+/* Default */
+.popup-wrap {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+}
+
+.popup-wrap.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-wrap.active .content-wrap {
+  -webkit-animation: show-popup .2s  ease-in;
+          animation: show-popup .2s  ease-in;
+}
+
+.popup-wrap .content-wrap {
+  width: 100%;
+  min-width: 400px;
+  max-width: 1024px;
+  max-height: 753px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  /* confirm */
+}
+
+.popup-wrap .content-wrap .head-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 24px 23.5px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.popup-wrap .content-wrap .head-sec .close-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.popup-wrap .content-wrap .body-sec {
+  padding: 39.5px 40px 0;
+}
+
+.popup-wrap .content-wrap .body-sec .popup-cont {
+  max-width: 944px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.popup-wrap .content-wrap .foot-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 40px 40px;
+}
+
+.popup-wrap .content-wrap .foot-sec .right-con > * {
+  margin-left: 8px;
+}
+
+.popup-wrap .content-wrap .foot-sec .right-con > *:first-child {
+  margin-left: 0;
+}
+
+.popup-wrap .content-wrap.small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  min-height: 227px;
+}
+
+.popup-wrap .content-wrap.small .head-sec {
+  height: 56px;
+  padding: 16px 16px 8px 32px;
+  border: none;
+}
+
+.popup-wrap .content-wrap.small .head-sec .close-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+.popup-wrap .content-wrap.small .head-sec .popup-title + .close-btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+.popup-wrap .content-wrap.small .body-sec {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 32px 24px;
+  text-align: center;
+  margin-top: 56px;
+}
+
+.popup-wrap .content-wrap.small .body-sec > * {
+  display: inline-block;
+}
+
+.popup-wrap .content-wrap.small .body-sec[class*=-center] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-wrap .content-wrap.small .body-sec.text-center {
+  position: relative;
+  z-index: -1;
+  margin-top: -28px !important;
+}
+
+.popup-wrap .content-wrap.small .body-sec.message-center {
+  margin-top: 19px !important;
+}
+
+.popup-wrap .content-wrap.small .head-sec + .body-sec {
+  margin-top: 0;
+}
+
+.popup-wrap .content-wrap.small .foot-sec {
+  padding: 0 0 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-wrap .content-wrap.small .foot-sec .center-con > * {
+  margin-left: 8px;
+}
+
+.popup-wrap .content-wrap.small .foot-sec .center-con > *:first-child {
+  margin-left: 0;
+}
+
+.popup-wrap .content-wrap [class*=icon-] {
+  padding-left: 36px;
+  text-align: left;
+}
+
+.popup-wrap .content-wrap .icon-confirm {
+  background: url("../img/ico_alert_check.svg") no-repeat left top/32px 32px;
+}
+
+.popup-wrap .content-wrap .icon-alert {
+  background: url("../img/ico_alert_warning.svg") no-repeat left top/32px 32px;
+  padding-left: 40px;
+}
+
+.popup-wrap .content-wrap .icon-noti {
+  background: url("../img/ico_alert_noti.svg") no-repeat left top/32px 32px;
+}
+
+.popup-wrap .dim-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}

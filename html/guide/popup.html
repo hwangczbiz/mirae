@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/guide.css">
+    <link rel="stylesheet" href="../../css/button.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <title>Popup Style Guide</title>
+</head>
+
+<body>
+    <main>
+        <!-- Popup -->
+        <h1>Popup Style Guide</h1>
+        <hr />
+        <section id="default-sec">
+            <h2>Default Popup</h2>
+            <p>
+                - min-Width: 400px / max-Width: 1024px / min-Height: Flexible / Max-Height: 753px
+            </p>
+            <p>
+                <input type="button" class="btn-solid" value="Default Popup" onclick="popupManager.openPopup('#popup-default')">
+            </p>
+        </section>
+        <hr />
+        <section id="message-sec">
+            <h2>Message Popup</h2>
+            <p>
+                - Width: 400px / min-Height: 227px
+            </p>
+            <p>
+                <input type="button" class="btn-solid" value="Confirm" onclick="popupManager.openPopup('#popup-confirm')">
+                <input type="button" class="btn-solid" value="Alert" onclick="popupManager.openPopup('#popup-alert')">
+                <input type="button" class="btn-solid" value="Text" onclick="popupManager.openPopup('#popup-text')">
+                <input type="button" class="btn-solid" value="Message" onclick="popupManager.openPopup('#popup-message')">
+            </p>
+        </section>
+        <hr />
+    </main>
+
+    <!-- default popup -->
+    <div class="popup-wrap" id="popup-default">
+        <div class="content-wrap">
+            <div class="head-sec">
+                <div class="popup-title">
+                    <h4>팝업 타이틀 영역</h4>
+                </div>
+                <div class="close-btn">
+                    <button type="button" onclick="popupManager.closePopup();"><img src="../../img/btn_form_clear.svg" alt="close"></button>
+                </div>
+            </div>
+            <div class="body-sec">
+                <div class="popup-cont">
+                    <p class="fs-15">
+                        국민주택사업에 필요한 자금을 조달하기 위하여 국민주택기금의 부담으로 발행되는 채권을 말합니다.<br/>
+소유권의 보존·이전등기, 저당권의 설정·이전등기를 신청하는 경우에는 주택법 제68조(국민주택채권의 매입)에 의하여 일정액의 국민주택채권을 매입하여야 합니다.(아래 국민주택채권매입대상 및 금액표 참조) 국민주택채권은 시가표준액을 기준으로 매입할 금액이 결정됩니다.<br/>
+채권매입내역 등과 관련된 사항은 등기신청사건처리현황 화면에서 확인할 수 있으며, 기타 자세한 사항은 채권매입 금융기관의 해당 지점에 문의하시기 바랍니다.<br/><br/>
+
+국가 또는 지방자치단체로부터 면허, 허가, 인가를 받거나 등기, 등록을 신청하는 자와 국가, 지방자치단체 또는 정부투자기관과 건설공사의 도급계약을 체결하는 자 중 대통령령이 정하는 자는 국민주택채권을 매입하여야 한다.(주택법 제68조)<br/><br/>
+
+국민주택사업에 필요한 자금을 조달하기 위하여 국민주택기금의 부담으로 발행되는 채권을 말합니다.<br/>
+소유권의 보존·이전등기, 저당권의 설정·이전등기를 신청하는 경우에는 주택법 제68조(국민주택채권의 매입)에 의하여 일정액의 국민주택채권을 매입하여야 합니다.(아래 국민주택채권매입대상 및 금액표 참조) 국민주택채권은 시가표준액을 기준으로 매입할 금액이 결정됩니다.<br/>
+채권매입내역 등과 관련된 사항은 등기신청사건처리현황 화면에서 확인할 수 있으며, 기타 자세한 사항은 채권매입 금융기관의 해당 지점에 문의하시기 바랍니다.<br/><br/>
+
+국가 또는 지방자치단체로부터 면허, 허가, 인가를 받거나 등기, 등록을 신청하는 자와 국가, 지방자치단체 또는 정부투자기관과 건설공사의 도급계약을 체결하는 자 중 대통령령이 정하는 자는 국민주택채권을 매입하여야 한다.(주택법 제68조)<br/><br/>
+
+국민주택사업에 필요한 자금을 조달하기 위하여 국민주택기금의 부담으로 발행되는 채권을 말합니다.<br/>
+소유권의 보존·이전등기, 저당권의 설정·이전등기를 신청하는 경우에는 주택법 제68조(국민주택채권의 매입)에 의하여 일정액의 국민주택채권을 매입하여야 합니다.(아래 국민주택채권매입대상 및 금액표 참조) 국민주택채권은 시가표준액을 기준으로 매입할 금액이 결정됩니다.
+                    </p>
+                </div>
+            </div>
+            <div class="foot-sec">
+                <div class="left-con">
+                    <input type="button" class="btn medium" value="보조 버튼이에요">
+                </div>
+                <div class="right-con">
+                    <input type="button" class="btn-solid medium color-main" value="버튼이 3개일 경우">
+                    <input type="button" class="btn-solid medium color-main" value="중요 버튼 영역이에요">
+                </div>
+            </div>
+        </div>
+        <div class="dim-wrap"></div>
+    </div>
+
+    <!-- confirm popup -->
+    <div class="popup-wrap" id="popup-confirm">
+        <div class="content-wrap small">
+            <div class="body-sec">
+                <div class="popup-cont">
+                    <p class="fs-18 icon-confirm">
+                        첨부로 전환하시겠습니까?
+                    </p>
+                </div>
+            </div>
+            <div class="foot-sec">
+                <div class="center-con">
+                    <input type="button" class="btn medium color-41" value="아니요" onclick="popupManager.closePopup()">
+                    <input type="button" class="btn-solid medium color-main" value="예">
+                </div>
+            </div>
+        </div>
+        <div class="dim-wrap"></div>
+    </div>
+
+    <!-- alert popup -->
+    <div class="popup-wrap" id="popup-alert">
+        <div class="content-wrap small">
+            <div class="head-sec">
+                <div class="close-btn">
+                    <button type="button" onclick="popupManager.closePopup();"><img src="../../img/btn_form_clear.svg" alt="close"></button>
+                </div>
+            </div>
+            <div class="body-sec">
+                <div class="popup-cont">
+                    <p class="fs-18 icon-alert">
+                        비밀번호는 영문, 숫자, 특수기호를 혼합하여 8자 이상 입력이 필수입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="foot-sec">
+                <div class="center-con">
+                    <input type="button" class="btn-solid medium color-main" value="확인">
+                </div>
+            </div>
+        </div>
+        <div class="dim-wrap"></div>
+    </div>
+
+    <!-- text popup -->
+    <div class="popup-wrap" id="popup-text">
+        <div class="content-wrap small">
+            <div class="head-sec">
+                <div class="close-btn">
+                    <button type="button" onclick="popupManager.closePopup();"><img src="../../img/btn_form_clear.svg" alt="close"></button>
+                </div>
+            </div>
+            <div class="body-sec text-center">
+                <div class="popup-cont">
+                    <p class="fs-18">
+                        비밀번호는 영문, 숫자, 특수기호를 혼합하여 8자 이상 입력이 필수입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="dim-wrap"></div>
+    </div>
+
+    <!-- message popup -->
+    <div class="popup-wrap" id="popup-message">
+        <div class="content-wrap small">
+            <div class="head-sec">
+                <div class="popup-title">
+                    <h4 class="fs-18 fw-bold">팝업 타이틀 영역</h4>
+                </div>
+                <div class="close-btn">
+                    <button type="button" onclick="popupManager.closePopup();"><img src="../../img/btn_form_clear.svg" alt="close"></button>
+                </div>
+            </div>
+            <div class="body-sec message-center">
+                <div class="popup-cont">
+                    <p class="fs-18">
+                        비밀번호는 영문, 숫자, 특수기호를 혼합하여 8자 이상 입력이 필수입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="dim-wrap"></div>
+    </div>
+
+    <script>
+        const popupManager = {
+            target: null
+            , dim: null
+
+            , focusableElement: "button, input:not([type='hidden']), select, iframe, textarea, [href]"
+            , focusList: null
+            , focusIdx: null
+
+            , registEvent: function(){
+                const _this = this;
+
+                _this.closePopup = this.closePopup.bind(_this);
+                _this.dim.addEventListener("click", _this.closePopup);
+
+                _this.moveFocus = this.moveFocus.bind(_this);
+                document.addEventListener("keydown", _this.moveFocus)
+            }
+            , removeEvent: function(){
+                this.dim.removeEventListener("click", this.closePopup);
+                document.removeEventListener("keydown", this.moveFocus);
+            }
+
+            , openPopup: function(id){
+                this.target = document.querySelector(id);
+                this.dim = this.target.querySelector(".dim-wrap");
+                this.target.classList.add("active");
+
+                this.setFocusList();
+                this.registEvent();
+            }
+            , closePopup: function(){
+                this.removeEvent();
+
+                this.target.classList.remove("active");
+                this.target = null;
+                this.dim = null;
+                
+                this.focusList = null;
+                this.focusIdx = null;
+            }
+
+            , setFocusList: function(){
+                this.focusList = this.target.querySelectorAll(this.focusableElement);
+                this.focusIdx = 0;
+                
+                this.focusList[0].focus();
+            }
+            , moveFocus: function(e){
+                const _this = this;
+                const code = e.keyCode || e.which;
+
+                if( code == 9 ){
+                    e.preventDefault();
+                    let idx;
+                    if( e.shiftKey ){
+                        idx = _this.focusIdx <= 0 ? _this.focusList.length - 1 : _this.focusIdx - 1;
+                    }else{
+                        idx = _this.focusIdx == _this.focusList.length - 1 ? 0 : _this.focusIdx + 1;
+                    }
+                    _this.focusIdx = idx;
+                    _this.moveFocus(idx);
+                }
+
+                this.focusList[_this.focusIdx].focus();
+            }
+        }
+    </script>
+</body>
+
+</html>
