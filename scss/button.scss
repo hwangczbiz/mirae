@@ -6,10 +6,11 @@
 /*-------------------------------------------------------------------
     @Button 
     - Size: default: small(50x30) 별도 클래스 없음 / .large, .medium 으로 사이즈 조절
-    - Style: default: line 별도 클래스 없음 / .solid, .icon- 으로 스타일링
+    - Style: default: line 별도 클래스 없음 / .-solid, .icon- 으로 스타일링
 -------------------------------------------------------------------*/
 /* input button */
-input[type=button][class*=btn] {
+input[type=button][class*=btn],
+button[class*=btn] {
     min-width: 50px;
     height: 30px;
     padding: 0px 10px;
@@ -17,18 +18,17 @@ input[type=button][class*=btn] {
     border-radius: 5px;
     background-color: $color-ff;
     cursor: pointer;
-    // transition: border-color .2s ease-in-out, background-color .2s ease-in-out, color .2s ease-in-out;
     @include fontStyler(14px, 500, 1.71, normal, $color-86);
     // hover, active
-    @include hoverStyler($color-86, $color-41, $color-ff);
+    @include btnHoverStyler($color-86, $color-41, $color-ff);
     &.color-41 {
         color: $color-41;
-        @include hoverStyler($color-41, $color-4d);
+        @include btnHoverStyler($color-41, $color-4d);
     }
     &.color-main {
         color: $color-main;
         border-color: $color-main;
-        @include hoverStyler($color-main, #102989);
+        @include btnHoverStyler($color-main, #102989);
     }
     // disabled
     &:disabled {
@@ -63,10 +63,10 @@ input[type=button][class*=btn] {
         color: $color-ff;
         border: none;
         background-color: $color-main;
-        @include hoverStyler($color-ff, none, $color-main);
+        @include btnHoverStyler($color-ff, none, $color-main);
         &.color-4d {
             background-color: $color-4d;
-            @include hoverStyler($color-ff, none, $color-4d);
+            @include btnHoverStyler($color-ff, none, $color-4d);
         }
         // disabled
         &:disabled {
@@ -79,25 +79,25 @@ input[type=button][class*=btn] {
         color: $color-ff;
         border: none;
         background: linear-gradient(346deg, $color-grad-orange1 63%, $color-grad-orange2);
-        @include hoverStyler($color-ff, none, gradation, $color-grad-orange1, $color-grad-orange2);
+        @include btnHoverStyler($color-ff, none, gradation, $color-grad-orange1, $color-grad-orange2);
         &.blue {
             background: linear-gradient(346deg, $color-grad-blue1 63%, $color-grad-blue2);
-            @include hoverStyler($color-ff, none, gradation, $color-grad-blue1, $color-grad-blue2);
+            @include btnHoverStyler($color-ff, none, gradation, $color-grad-blue1, $color-grad-blue2);
         }
     }
 
     // icon
     &.icon-member {
-        background-image: url("../../img/btn_micon_person.svg");
+        background-image: url("../img/btn_micon_person.svg");
     }
     &.icon-add {
-        background-image: url("../../img/btn_sicon_add.svg");
+        background-image: url("../img/btn_sicon_add.svg");
     }
     &.icon-download {
-        background-image: url("../../img/btn_sicon_download.svg");
+        background-image: url("../img/btn_sicon_download.svg");
     }
     &.icon-prev {
-        background-image: url("../../img/btn_licon_back.svg");
+        background-image: url("../img/btn_licon_back.svg");
     }
     &[class*=icon-] {
         padding-left: 29px;
@@ -128,10 +128,10 @@ a[class*=btn-text] {
     }
     &.icon-lock {
         padding-left: 23px;
-        background: url("../../img/btn_tmicon_findaid.svg") no-repeat left center;
+        background: url("../img/btn_tmicon_findaid.svg") no-repeat left center;
     }
     &.icon-next {
         padding-right: 16px;
-        background: url("../../img/btn_tsicon_arrow_right.svg") no-repeat right center;
+        background: url("../img/btn_tsicon_arrow_right.svg") no-repeat right center;
     }
 }

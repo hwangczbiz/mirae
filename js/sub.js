@@ -57,12 +57,11 @@ $(function(){
 const inputClearHandler = {
     isSetClear: false
     , inputList: null
-    , hasClearBtnList: null
+    , hasClearBtnList: ["text", "password", "number"]
 
     , init: function(){
         this.isSetClear = true;
         this.inputList = document.querySelectorAll("input");
-        this.hasClearBtnList = ["text", "password", "number"];
         const _this = this;
 
         for(let i=0; i<this.inputList.length; i++){

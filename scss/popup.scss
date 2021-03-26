@@ -5,31 +5,17 @@
 /*-------------------------------------------------------------------
     @Popup
 -------------------------------------------------------------------*/
-@keyframes show-popup {
-    from {
-        margin-top: 100px;
-    }
-    to {
-        margin-top: 0;
-    }
-}
 /* default popup */
 .popup-wrap {
-    visibility: hidden;
+    display: none;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
-    opacity: 0;
-    transition: opacity .2s ease-in;
     &.active {
-        visibility: visible;
-        opacity: 1;
-        .content-wrap {
-            animation: show-popup .2s  ease-in;
-        }
+        display: block;
     }
     .content-wrap {
         width: 100%;
@@ -46,7 +32,7 @@
         .head-sec{
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
             padding: 24px 24px 23.5px 40px;
             border-bottom: 1px solid #ddd;
             .close-btn img {
@@ -65,7 +51,7 @@
         .foot-sec{
             display: flex;
             justify-content: space-between;
-            padding: 24px 40px 40px;
+            margin: 24px 40px 40px;
             .right-con > * {
                 margin-left: 8px;
                 &:first-child {
@@ -79,23 +65,25 @@
             flex-direction: column;
             width: 400px;
             min-height: 227px;
+            border: 1px solid #e6e6e6;
             .head-sec {
-                height: 56px;
-                padding: 16px 16px 8px 32px;
+                height: 55px;
+                padding: 15px 15px 8px 31px;
                 border: none;
                 .close-btn { 
-                    flex: 1;
+                    flex: 1 1 auto;
                     text-align: right;
                 }
                 .popup-title + .close-btn {
-                    flex: 0;
+                    flex: 0 0 auto;
                 }
             }
             .body-sec {
-                flex: 1;
-                padding: 0 32px 24px;
+                flex: 1 1 auto;
+                min-height: 78px;
+                padding: 0 31px;
+                margin: 56px 0 23px;
                 text-align: center;
-                margin-top: 56px;
                 > * {
                     display: inline-block;
                 }
@@ -104,24 +92,26 @@
                     align-items: center;
                 }
                 &.text-center {
-                    position: relative;
+                    min-height: 175px;
                     z-index: -1;
                     margin-top: -28px !important;
                 }
                 &.message-center {
-                    margin-top: 19px !important;
+                    min-height: 128px;
+                    margin-top: 16px !important;
                 }
             }
             .head-sec + .body-sec {margin-top: 0;}
             .foot-sec {
-                padding: 0 0 24px;
+                margin: 0 31px 23px;
                 justify-content: center;
                 .center-con {
+                    display: inline-block;
                     > * {
                         margin-left: 8px;
                         &:first-child {
                             margin-left: 0;
-                        } 
+                        }
                     }
                 }
             }

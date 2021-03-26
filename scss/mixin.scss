@@ -13,11 +13,11 @@
 }
 
 /*-------------------------------------------------------------------
-    @Mixin - hoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
+    @Mixin - btnHoverStyler(글자색, 보더색, 배경색, 그라데이션1, 그라데이션2)
     - 배경색이 있는 버튼(btn-solid)이라면 hover시 기존 배경색 + #000000 35%로 적용
     - 4,5번째 인자는 3번째 인자가 'gradation'인 경우에만 적용됨
 -------------------------------------------------------------------*/
-@mixin hoverStyler($color, $bdcolor, $bgcolor: #ffffff, $grad1: #FF793E, $grad2: #FFC16E){
+@mixin btnHoverStyler($color, $bdcolor, $bgcolor: #ffffff, $grad1: #FF793E, $grad2: #FFC16E){
     &.hover:not([disabled]),
     &:hover:not([disabled]), 
     &:focus:not([disabled]), 

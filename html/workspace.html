@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>Work List</title>
+	<style>
+		* {margin:0;padding:0;}
+            h1 {padding:15px 20px 15px 20px;font-size:24px;background:#ececec;}
+            .stat {padding:10px 10px;}
+            .stat p {display:inline-block;margin-left:10px;font-size:12px;}
+            h2 {margin:30px 20px 0px 20px;}
+            table {width:calc(100% - 40px);margin:0 20px 50px 20px;border-collapse:collapse;border-top:2px solid #ccc;}
+            th {padding:10px 20px;font-size:12px;border-bottom:1px solid #ccc;background:#ececec;}
+            td {padding:5px 20px;font-size:12px;border-bottom:1px solid #ccc;}
+            td:nth-child(1),
+            td:nth-child(7)  {text-align:center;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            var trNum = $('table tr').length + 1;
+            for(i = 0; i < trNum; i++){
+                $('table tr:nth-child(' + i + ') td:first-child').text(i-1);
+                linktext = $('table tr:nth-child(' + i + ') td:nth-child(6)').text()
+                if($('table tr:nth-child(' + i + ') td:nth-child(7)').text() == '완료'){
+                    $('table tr:nth-child(' + i + ') td:nth-child(6)').html('<a href="HTML/'+ linktext +'" target="_blank">'+ linktext +'</a>')
+                }
+                if($('table tr:nth-child(' + i + ') td:nth-child(7)').text() == '진행중'){
+                    $('table tr:nth-child(' + i + ') td:nth-child(6)').html('<a href="HTML/'+ linktext +'" target="_blank">'+ linktext +'</a>')
+                }
+            }
+            $('.stat .page-total').text(trNum - 2)
+            $('.stat .page-ing').text($('table td:nth-child(7):contains("진행중")').length)
+            $('.stat .page-comp').text($('table td:nth-child(7):contains("완료")').length)
+
+        });
+    </script>
+</head>
+<body>
+	<h1>HTML Worklist</h1>
+
+	<h2>PC Ver</h2>
+	<div class="stat">
+		<p>총 페이지 : <span class="page-total"></span> 페이지</p>
+		<p>진행중 : <span class="page-ing"></span> 페이지</p>
+		<p>완료 : <span class="page-comp"></span> 페이지</p>
+	</div>
+	<table>
+		<colgroup>
+		<col width="80" >
+		<col width="200" >
+		<col width="200" >
+		<col width="200" >
+		<col width="250" >
+		<col width="400" >
+		<col width="100" >
+		<col >
+		</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>구분</th>
+			<th>DEPTH1</th>
+			<th>DEPTH1</th>
+			<th>DEPTH3</th>
+			<th>파일명</th>
+			<th>작업상황</th>
+			<th>비고</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Guide</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>guide.html</td>
+			<td>진행중</td>
+			<td>윈도우팝업</td>
+		</tr>
+
+	</table>
+</body>
+</html>
