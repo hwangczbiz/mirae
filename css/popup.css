@@ -155,7 +155,7 @@
 
 .popup-wrap .content-wrap.small .body-sec.message-center {
   min-height: 128px;
-  margin-top: 16px !important;
+  margin-top: 8px !important;
 }
 
 .popup-wrap .content-wrap.small .head-sec + .body-sec {
@@ -179,6 +179,92 @@
 
 .popup-wrap .content-wrap.small .foot-sec .center-con > *:first-child {
   margin-left: 0;
+}
+
+.popup-wrap .content-wrap.emergency {
+  width: 408px;
+}
+
+.popup-wrap .content-wrap.emergency .body-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 27px 40px 0px;
+  margin: 8px 7px 0px;
+  border-radius: 5px;
+  background-color: #2e3a59;
+  text-align: center;
+}
+
+.popup-wrap .content-wrap.emergency .body-sec .popup-title > span {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: normal;
+  color: #FFFFFF;
+}
+
+.popup-wrap .content-wrap.emergency .body-sec .content-title {
+  margin-top: 40px;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1.24;
+  letter-spacing: -1.7px;
+  color: #FFFFFF;
+}
+
+.popup-wrap .content-wrap.emergency .body-sec .content-cont {
+  margin-top: 19px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.44;
+  letter-spacing: -0.8px;
+  color: #FFFFFF;
+}
+
+.popup-wrap .content-wrap.emergency .body-sec .content-img {
+  max-width: 314px;
+  max-height: 102px;
+  margin-top: 45px;
+}
+
+.popup-wrap .content-wrap.emergency .foot-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 12px 15px 10px 23px;
+}
+
+.popup-wrap .content-wrap.emergency .foot-sec .cookie-btn {
+  padding-left: 25px;
+  background: url("../img/ico_notice_emergency_check.svg") no-repeat left center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: -0.28px;
+  color: #868686;
+}
+
+.popup-wrap .content-wrap.emergency .foot-sec .close-btn img {
+  width: 40px;
+  height: 40px;
 }
 
 .popup-wrap .content-wrap [class*=icon-] {

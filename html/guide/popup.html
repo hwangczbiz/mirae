@@ -40,6 +40,18 @@
             </p>
         </section>
         <hr />
+        <section id="emergency-sec">
+            <h2>Emergency Popup</h2>
+            <p>
+                사용자에게 전달할 주요 공지(긴급)의 경우 사용되며, 가급적 세로 스크롤 사용하는 것을 지양한다.<br/><br/>
+                - 일반공지는 메인 상단에 띠배너 형식으로 제공한다.<br/><br/>
+                - dimmed #000000 60%  위에 팝업 호출
+            </p>
+            <p>
+                <button type="button" class="btn-solid" onclick="popupManager.openPopup('#popup-emergency')">Emergency</button>
+            </p>
+        </section>
+        <hr />
     </main>
 
     <!-- default popup -->
@@ -171,6 +183,37 @@
         <div class="dim-wrap"></div>
     </div>
 
+    <!-- emergency popup -->
+    <div class="popup-wrap" id="popup-emergency">
+        <div class="content-wrap emergency">
+            <div class="body-sec">
+                <div class="popup-title">
+                    <span>긴급공지</span>
+                </div>
+                <div class="content-title">
+                    인터넷등기소<br/>
+                    정기 점검 및 변경
+                </div>
+                <div class="content-cont">
+                    인터넷등기소 정기 점검 및 변경으로<br/>
+                    일부 서비스가 중단됩니다. 
+                </div>
+                <div class="content-img">
+                    <img src="../../img/img_notice_emergency.svg" alt="emergency">
+                </div>
+            </div>
+            <div class="foot-sec">
+                <div class="cookie-btn">
+                    오늘 다시 보지 않기
+                </div>
+                <div class="close-btn">
+                    <button type="button" onclick="popupManager.closePopup();"><img src="../../img/ico_notice_emergency_close.svg" alt="close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="dim-wrap"></div>
+    </div>
+
     <script>
         const popupManager = {
             target: null
@@ -180,6 +223,7 @@
             , focusList: null
             , focusIdx: null
 
+            // event 등록, 제거
             , registEvent: function(){
                 const _this = this;
 
@@ -194,10 +238,12 @@
                 document.removeEventListener("keydown", this.moveFocus);
             }
 
+            // popup 열기, 닫기
             , openPopup: function(id){
                 this.target = document.querySelector(id);
                 this.dim = this.target.querySelector(".dim-wrap");
                 this.target.classList.add("active");
+                document.querySelector("body").style.overflow = "hidden";
 
                 this.setFocusList();
                 this.registEvent();
@@ -208,11 +254,13 @@
                 this.target.classList.remove("active");
                 this.target = null;
                 this.dim = null;
+                document.querySelector("body").style.overflow = "auto";
                 
                 this.focusList = null;
                 this.focusIdx = null;
             }
 
+            // focus 핸들링
             , setFocusList: function(){
                 this.focusList = this.target.querySelectorAll(this.focusableElement);
                 this.focusIdx = 0;

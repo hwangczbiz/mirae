@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="ico_notice_emergency_close" transform="translate(-1518.5 -24.241)">
+        <path id="선_190" d="M14 0L0 15" class="cls-1" transform="translate(1531.5 37.24)"/>
+        <path id="선_191" d="M0 0L14 15" class="cls-1" transform="translate(1531.5 37.24)"/>
+    </g>
+</svg>

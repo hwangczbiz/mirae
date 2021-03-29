@@ -98,7 +98,7 @@
                 }
                 &.message-center {
                     min-height: 128px;
-                    margin-top: 16px !important;
+                    margin-top: 8px !important;
                 }
             }
             .head-sec + .body-sec {margin-top: 0;}
@@ -113,6 +113,54 @@
                             margin-left: 0;
                         }
                     }
+                }
+            }
+        }
+        &.emergency {
+            width: 408px;
+            .body-sec {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 27px 40px 0px;
+                margin: 8px 7px 0px;
+                border-radius: 5px;
+                background-color: #2e3a59;
+                text-align: center;
+                .popup-title > span {
+                    display: inline-block;
+                    padding-bottom: 2px;
+                    border-bottom: 1px solid $color-ff;
+                    @include fontStyler(14px, 500, 1.71, normal, $color-ff);
+                }
+                .content-title {
+                    margin-top: 40px;
+                    @include fontStyler(34px, bold, 1.24, -1.7px, $color-ff);
+                }
+                .content-cont {
+                    margin-top: 19px;
+                    @include fontStyler(16px, 500, 1.44, -0.8px, $color-ff);
+                }
+                .content-img {
+                    max-width: 314px;
+                    max-height: 102px;
+                    margin-top: 45px;
+                }
+            }
+            .foot-sec {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 12px 15px 10px 23px;
+                .cookie-btn {
+                    padding-left: 25px;
+                    background: url("../img/ico_notice_emergency_check.svg") no-repeat left center;
+                    cursor: pointer;
+                    @include fontStyler(14px, 500, 1.71, -0.28px, $color-86);
+                }
+                .close-btn img {
+                    width: 40px;
+                    height: 40px;
                 }
             }
         }
